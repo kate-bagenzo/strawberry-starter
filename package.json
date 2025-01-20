@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx @11ty/eleventy --serve --port 1234",
-    "build": "npx @11ty/eleventy"
+    "build": "npx @11ty/eleventy",
+    "upload": "node _functions/upload-neo.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "dotenv": "^16.4.7",
+    "neocities": "^0.0.3"
   },
   "type": "module"
 }
