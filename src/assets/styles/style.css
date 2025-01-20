@@ -11,6 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 2rem;
 }
 
 nav ol {
@@ -22,11 +23,17 @@ nav ol,
 nav li {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 nav,
 main {
     width: 90%;
-    max-width: 44rem;
+    max-width: 42rem;
+    padding: 1rem;
+}
+
+main {
+    line-height: 1.6rem;
 }
 
 #latest_posts {

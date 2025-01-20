@@ -1,0 +1,13 @@
+:root {
+    --main-bg-color: white;
+    --main-fg-color: black;
+}
+
+nav,
+main {
+    border: 1px solid var(--main-fg-color);
+}
+
+nav {
+    border-bottom: none;
+}
