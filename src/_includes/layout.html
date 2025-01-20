@@ -5,9 +5,23 @@ layout: head.html
     <nav>
         <ol>
             <li><a href="/">Home</a></li>
+            {% for i in collections.pages %}
+            <li><a href="{{ i.url }}">{{ i.data.title }}</a></li>
+            {% endfor %}
         </ol>
     </nav>
     <main>
+        <h1>{{ title }}</h1>
         {{ content }}
+        {% if page.url == '/'  and collections.posts%}
+        <h2>Latest Posts:</h2>
+        <ol id="latest_posts">
+        {% for i in collections.posts %}
+        <li>
+            <a href="{{ i.url }}">{{ i.data.date | dateDMY }} - {{ i.data.title }}</a>
+        </li>
+        {% endfor %}
+        </ol>
+        {% endif %}
     </main>
 </body>

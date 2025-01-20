@@ -6,7 +6,31 @@ html {
     font-size: 18px;
 }
 
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ol {
+    display: flex;
+    gap: 1rem;
+}
+
 nav ol,
 nav li {
     list-style-type: none;
+    padding: 0;
+}
+nav,
+main {
+    width: 90%;
+    max-width: 44rem;
+}
+
+#latest_posts {
+    list-style-type: none;
+    font-size: 1.2rem;
+    padding: 0;
 }
