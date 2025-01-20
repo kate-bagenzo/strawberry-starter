@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="{{ config.siteDescription }}" />
+    <title>{{ title }}</title>
+
+    <!--cache busting-->
+    {% if page.url == '/' %}
+    <meta http-equiv="Cache-Control" content="max-age=0, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0" />
+    {% endif %}
+
+    <!--opengraph/twitter cards
+    <meta property="og:title" content="claymore gwen" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://claymoregwen.neocities.org" />
+    <meta property="og:image" content="https://claymoregwen.neocities.org/assets/site/img/social.png" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@claymoregwen" />
+    <meta name="twitter:title" content="claymoregwen" />
+
+    <meta name="twitter:description" content="{{ title }}" />
+    <meta name="twitter:image" content="https://claymoregwen.neocities.org/assets/site/img/social.png" />
+    -->
+
+    <!--styles-->
+    <link rel="preload" href="/normalize.css" as="style" />
+    <link rel="stylesheet" href="/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="/style.css" type="text/css" />
+    <link rel="icon" sizes="16x16 24x24 32x32 64x64" href="/favicon.ico">
+  </head>
+  {{ content }}

@@ -1,0 +1,17 @@
+{
+  "name": "blog-engine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve --port 1234",
+    "build": "npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  },
+  "type": "module"
+}
