@@ -25,7 +25,11 @@ layout: head.html
         {% endif %}
     </main>
     <footer>
-        <p>{{ config.siteName }} is written by <a href="{{ authorLink }}">{{ config.siteAuthor }}</a></p>
-        <p>Contact: <a href="mailto:{{ config.authorContact}}">{{ config.authorContact }}</a></p><p>Last update: {{ lastUpdate }}</p>
+        <p>{{ config.siteName }} is written by <a href="{{ config.authorLink }}">{{ config.siteAuthor }}</a></p>
+        <address>Contact: <a href="mailto:{{ config.authorContact}}">{{ config.authorContact }}</a></address>
+        <aside>
+            <p>Last update: {{ lastUpdate }}</p>
+            <a href="#">back to top</a>
+        </aside>
     </footer>
 </body>
