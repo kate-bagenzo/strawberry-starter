@@ -13,9 +13,14 @@ Here's an abridged list of what to do. ***Don't*** bother reading the entirety o
     - Grab it from the [node website](https://nodejs.org/en).
 - **Install Node**.
     - Follow the instructions on the node website.
-    - On Windows & macOS, this means copy & pasting some code into a terminal.
-        - Use Powershell on Windows. Don't use the program called "Terminal".
-- **Unzip 
+    - On Windows & macOS, this means either running an installer, or copy/pasting code into Powershell (Windows) or the Terminal (macOS & Linux).
+- **Unzip Strawberry Starter**
+    - You can move it around later, so don't be too picky about where you place it.
+- **Open a Terminal in Strawberry Starter's folder**
+    - If using Windows: be sure to use Powershell here, not the program called "Terminal"!
+- **Execute the command: `npm i`**
+    - If you don't see any errors, then congrats! You can now blog to your heart's content.
+
 
 ## Step 1 - Download and install
 Strawberry Starter uses two main technologies: *node* and *11ty*.  
@@ -40,32 +45,3 @@ You need to run that code in a terminal for the download to start.
     - This preview automatically updates when you make changes, like adding or editing a blog post
 
 Try going to localhost:1234/ now. If you see the Strawberry Starter site, then congrats! It means everything is working.
-
-## Step 2 - Site
-Here's a quick overview of the folders and files in Strawberry Starter:
-- _functions/
-    - Contains scripts.
-- _site/
-    - When you build your site, the finished product will appear in this folder.
-    - You can upload it to a hosting provider, or use the `npm run neoupload` command to upload it to your neocities page.
-- node_modules/
-    - Contains various node packages.
-- src/
-    - _data/
-        - config.json
-            - This config file contains various information that's used in your blog.
-    - _includes/
-        - Contains the layout of your blog. If you have HTML knowledge and want more control over how it looks, edit the pages stored here.
-    - assets/
-        * An assorted folder for storing things like images or scripts or styles. Anything placed in this folder will automatically be copied over to `_site/` when you run the `build` command.
-    - pages/
-        * Contains pages that will appear on the navbar at the top of your blog. By default, you have two: `all_posts` and `about`.
-        * If you want to add a new navbar section to your blog, add a .md file here.
-    - posts/
-        * Contains blog posts.
-        * If you want to add a new blog post, add a .md file here.
-- .env
-    * This file isn't created by default (for security reasons). If you place your neocities API key here, you can upload your site with a single command!
-- .gitignore
-    * Files ignored by git. If you know how to use git, then this is useful to you. If not, don't worry about it.
-- eleventy.config.js
