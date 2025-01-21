@@ -2,6 +2,8 @@
     "siteName": "Strawberry Starter",
     "siteDescription": "A simply-sweet blog template!",
     "siteAuthor": "Kate Bagenzo",
+    "authorLink": "https://katebagenzo.neocities.org",
     "authorContact": "katebagenzo@gmail.com",
-    "siteStyle": "plain"
+    "siteStyle": "plain",
+    "neoCitiesSubdirectory": ""
 }

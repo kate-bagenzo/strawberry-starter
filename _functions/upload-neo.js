@@ -6,6 +6,7 @@ import path from 'path';
 import url from 'url';
 import qs from 'querystring';
 import FormData from 'form-data';
+import { debug } from 'console';
 
 function NeoCities(key, opts) {
   this.key = key
@@ -97,6 +98,9 @@ NeoCities.prototype.upload = function(files, callback) {
 // let's rock!
 const api = new NeoCities(process.env.NEOCITIES);
 
+const config = JSON.parse(fs.readFileSync('src/_data/config.json', 'utf8'));
+const subDir = config['neoCitiesSubdirectory'];
+
 const toUpload = [];
 fs.readdir('_site', {recursive: true, withFileTypes: true}, (err, files) => {
     if (err) {
@@ -104,7 +108,7 @@ fs.readdir('_site', {recursive: true, withFileTypes: true}, (err, files) => {
     }
     files.forEach( (file) => {
         if (file.isFile()) {
-            const newPath = file.parentPath.replace("_site", "");
+            const newPath = file.parentPath.replace("_site", subDir);
             toUpload.push({
                 name: `${newPath}/${file.name}`,
                 path: `${file.parentPath}/${file.name}`
