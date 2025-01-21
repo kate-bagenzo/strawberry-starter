@@ -1,8 +1,13 @@
 ---
-title: All posts
+title: All Posts
 date: 2025-01-01
 ---
-<ol>
-    {% for i in collections.post reversed %}
-    <li><a></a></li>
+{% if not collections.post %}
+<ol id="latest_posts">
+    {% for i in collections.posts reversed %}
+    <li><a href="{{ i.url }}">{{ i.data.date | dateDMY }} - {{ i.data.title }}</a></li>
+    {% endfor %}
 </ol>
+{% else %}
+<p>No posts yet!</p>
+{% endif %}

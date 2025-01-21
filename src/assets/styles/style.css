@@ -11,7 +11,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 nav ol {
@@ -34,6 +36,14 @@ main {
 
 main {
     line-height: 1.6rem;
+}
+
+main img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 #latest_posts {

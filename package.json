@@ -1,5 +1,5 @@
 {
-  "name": "blog-engine",
+  "name": "strawberry-starter",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,12 +9,11 @@
     "upload": "node _functions/upload-neo.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Kate Bagenzo",
+  "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "dotenv": "^16.4.7",
-    "neocities": "^0.0.3"
+    "dotenv": "^16.4.7"
   },
   "type": "module"
 }
