@@ -4,10 +4,15 @@
 }
 
 nav,
-main {
+main,
+footer {
     border: 1px solid var(--main-fg-color);
 }
 
 nav {
     border-bottom: none;
+}
+
+footer {
+    border-top: none;
 }

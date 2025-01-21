@@ -28,7 +28,8 @@ nav li {
     margin: 0;
 }
 nav,
-main {
+main,
+footer {
     width: 90%;
     max-width: 42rem;
     padding: 1rem;
@@ -50,4 +51,14 @@ main img {
     list-style-type: none;
     font-size: 1.2rem;
     padding: 0;
+}
+
+footer {
+    font-size: 0.8rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+footer p {
+    margin: 0.1rem;
 }

@@ -4,6 +4,13 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/normalize.css");
     eleventyConfig.addPassthroughCopy("src/favicon.ico");
 
+    eleventyConfig.addGlobalData('lastUpdate', () => {
+        let now = new Date();
+        return new Intl.DateTimeFormat(
+          'en-US', { dateStyle: 'medium' }
+        ).format(now);
+      });
+
     eleventyConfig.addFilter("dateDMY", function(value) {
         const converted = new Intl.DateTimeFormat('en-GB', {
             dateStyle: "short"
