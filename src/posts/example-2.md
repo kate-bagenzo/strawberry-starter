@@ -55,4 +55,4 @@ Images are fundamental to any blog, right?
 ## HTML
 <p>Finally, when Markdown just doesn't cut it, you CAN write HTML, if you really want to. Any valid HTML is also valid Markdown.</p>
 <p>You probably don't <em>want</em> to write HTML! But it does mean you can paste stuff in your posts like, for example, Youtube embeds!</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WEv5ZqkaS54?si=28IFF1WgKZmq2hT0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WEv5ZqkaS54?si=mcG95jGYfg2U0tdW&amp;controls=0&amp;start=12" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

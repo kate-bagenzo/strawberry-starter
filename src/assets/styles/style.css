@@ -72,3 +72,11 @@ footer aside {
     justify-content: space-between;
     align-items: baseline;
 }
+
+iframe {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
