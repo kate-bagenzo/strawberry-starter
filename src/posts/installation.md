@@ -65,6 +65,15 @@ There are some other pages on your site besides blog posts, though! You'll notic
         - It won't count as a "post" though, so it won't appear in "Latest posts" or RSS.
         - Luckily, you can add a blog post to the navbar by adding `tags: navbar` to its front matter.
 
+## Favicon and Opengraph
+There are two last things you want to customize:
+- The favicon, which appears in the browser tab and bookmarks.
+    - Found at `src/favicon.ico`
+- The Opengraph preview, which appears when you link to your blog on some sites, like social media.
+    - Found at `src/social.png`
+
+Both of these are images you can edit in any graphics editor. Don't change their filenames or formats!
+
 ## Building and uploading your blog
 To get your blog ready for uploading somewhere, go to the command line and type `npm run build`. A folder called `_site` will appear. That folder is your completed blog, and is ready to be uploaded to whatever hosting provider you choose!
 
