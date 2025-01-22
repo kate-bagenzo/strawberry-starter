@@ -13,25 +13,23 @@
     <meta http-equiv="Expires" content="0" />
     {% endif %}
 
-    <!--opengraph/twitter cards
-    <meta property="og:title" content="claymore gwen" />
+    <!--opengraph cards-->
+    <meta property="og:title" content="{{ config.siteName }}" />
+    <meta property="og:description" content="{{ title }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://claymoregwen.neocities.org" />
-    <meta property="og:image" content="https://claymoregwen.neocities.org/assets/site/img/social.png" />
+    <meta property="og:url" content="{{ config.siteURL }}" />
+    <meta property="og:image" content="{{ config.siteURL }}/social.png" />
     
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@claymoregwen" />
-    <meta name="twitter:title" content="claymoregwen" />
-
+    <meta name="twitter:title" content="{{ config.siteName }}" />
     <meta name="twitter:description" content="{{ title }}" />
-    <meta name="twitter:image" content="https://claymoregwen.neocities.org/assets/site/img/social.png" />
-    -->
+    <meta name="twitter:image" content="{{ config.siteURL }}/social.png" />
 
     <!--styles-->
     <link rel="preload" href="/assets/styles/normalize.css" as="style" />
     <link rel="stylesheet" href="/assets/styles/normalize.css" type="text/css" />
     <link rel="stylesheet" href="/assets/styles/style.css" type="text/css" />
-    <link rel="stylesheet" href="/assets/styles/{{ config.siteStyle }}.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/styles/themes/{{ config.siteStyle }}.css" type="text/css" />
     <link rel="icon" sizes="16x16 24x24 32x32 64x64" href="/favicon.ico">
   </head>
   {{ content }}
