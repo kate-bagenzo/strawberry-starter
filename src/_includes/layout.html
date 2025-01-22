@@ -6,7 +6,7 @@ layout: head.html
         <ol>
             <li><a href="/">Home</a></li>
             {% for i in collections.navbar %}
-            <li><a href="{{ i.url }}">{{ i.data.title }}</a></li>
+                <li><a href="{{ i.url }}">{{ i.data.title }}</a></li>
             {% endfor %}
         </ol>
     </nav>
@@ -14,29 +14,33 @@ layout: head.html
         <h1>{{ title }}</h1>
         {{ content }}
         {% if page.url == '/'  and collections.posts%}
-        <h2>Latest Posts:</h2>
-        <ol id="latest_posts">
-        {% for i in collections.posts reversed %}
-        <li>
-            <a href="{{ i.url }}">{{ i.data.date | dateDMY }} - {{ i.data.title }}</a>
-        </li>
-        {% endfor %}
-        </ol>
+            <h2>Latest Posts:</h2>
+            <ol id="latest_posts">
+            {% for i in collections.posts reversed %}
+                <li>
+                    <a href="{{ i.url }}">{{ i.data.date | dateDMY }} - {{ i.data.title }}</a>
+                </li>
+            {% endfor %}
+            </ol>
         {% endif %}
     </main>
     <footer>
-        <p>{{ config.siteName }} is written by 
+        <p>
+            {{ config.siteName }} is written by 
             {% if config.authorLink != "" %}
-            <a href="{{ config.authorLink }}">{{ config.siteAuthor }}</a>
-            {% else %}
-            {{ config.siteAuthor }}
+                <a href="{{ config.authorLink }}">{{ config.siteAuthor }}</a>
+                {% else %}
+                {{ config.siteAuthor }}
             {% endif %}
         </p>
         {% if config.authorContact != "" %}
-        <address>Contact: <a href="mailto:{{ config.authorContact}}">{{ config.authorContact }}</a></address>
+            <address>Contact: <a href="mailto:{{ config.authorContact}}">{{ config.authorContact }}</a></address>
         {% endif %}
         <aside>
-            <p>Last update: {{ lastUpdate }} <a href="feed.xml">RSS</a></p>
+            <p>
+                <time class="lastupdate" datetime="{{lastUpdate}}">Last update: {{ lastUpdate }}</time>
+                <a href="feed.xml">RSS</a>
+            </p>
             <a href="#">back to top</a>
         </aside>
     </footer>

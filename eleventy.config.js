@@ -5,6 +5,7 @@ const config = JSON.parse(fs.readFileSync('src/_data/config.json', 'utf8'));
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/");
+  eleventyConfig.addPassthroughCopy("src/assets/social.png");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
 
   eleventyConfig.addPlugin(feedPlugin, {
