@@ -6,7 +6,6 @@ import path from 'path';
 import url from 'url';
 import qs from 'querystring';
 import FormData from 'form-data';
-import { debug } from 'console';
 
 function NeoCities(key, opts) {
   this.key = key

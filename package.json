@@ -13,7 +13,9 @@
   "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "dotenv": "^16.4.7"
+    "@11ty/eleventy-plugin-rss": "^2.0.3",
+    "dotenv": "^16.4.7",
+    "form-data": "^4.0.1"
   },
   "type": "module"
 }

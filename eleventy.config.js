@@ -1,6 +1,30 @@
+import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import fs from 'fs';
+
+const config = JSON.parse(fs.readFileSync('src/_data/config.json', 'utf8'));
+
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
+
+  eleventyConfig.addPlugin(feedPlugin, {
+		type: "atom",
+		outputPath: "/feed.xml",
+		collection: {
+			name: "posts",
+			limit: 10,
+		},
+		metadata: {
+			language: "en",
+			title: config.siteName,
+			subtitle: config.siteDescription,
+			base: config.siteURL,
+			author: {
+				name: config.siteAuthor,
+				email: config.authorContact,
+			}
+		}
+	});
 
   eleventyConfig.addGlobalData('lastUpdate', () => {
     let now = new Date();

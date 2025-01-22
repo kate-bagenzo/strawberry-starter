@@ -73,6 +73,10 @@ footer aside {
     align-items: baseline;
 }
 
+.rss::before {
+    content: "| ";
+}
+
 iframe {
     margin-left: auto;
     margin-right: auto;

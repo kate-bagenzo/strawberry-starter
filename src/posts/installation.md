@@ -32,6 +32,8 @@ This file has information that appears in a few places in your blog. Right now i
     - A small description of your site. Appears on the link preview.
 - `siteAuthor`
     - Your name. Appears on the footer.
+- `siteURL`
+    - The public URL where people can visit your blog. Needed for the link preview and RSS feed to function correctly.
 - `authorLink`
     - A link to your personal website or social media or etc. Appears on the footer. You can leave this blank if you prefer.
 - `authorContact`
