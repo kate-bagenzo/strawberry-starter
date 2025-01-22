@@ -3,7 +3,8 @@ title: Welcome to Strawbery Starter!
 date: 2024-01-20
 layout: layout.html
 ---
-A simple, quick blog template using [11ty](https://www.11ty.dev/)!
+A simple, quick blog template for [11ty](https://www.11ty.dev/)!
+![a pixellated strawberry](/assets/images/berrysprite.png)
 
 ## Features:
 - Write locally, on your computer!

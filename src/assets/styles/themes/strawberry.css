@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/assets/fonts/roboto.ttf');
+}
+:root {
+    --main-bg-color: #100a16;
+    --main-fg-color: #deeed6;
+    --main-highlight-color: #346524;
+    --main-header-color: #d04648;
+    --main-link-color: #597dce;
+    --hover-link-color: #6dc2ca;
+    --active-link-color: #dad45e;
+    --nested-ul-color: #6daa2c;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-fg-color);
+    font-family: 'Roboto', 'sans-serif';
+}
+
+nav,
+main,
+footer {
+    border: 2px solid var(--main-fg-color);
+    border-radius: 1rem;
+}
+
+main {
+    border-top: none;
+    border-bottom: none;
+}
+
+nav, main {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+footer, main {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+img[src='/assets/images/berrysprite.png'] {
+    float: right;
+    padding-right: 1rem;
+}
+
+blockquote {
+    margin-left: 0;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--main-highlight-color);
+}
+
+code {
+    background-color: var(--main-highlight-color);
+    padding: 0.1rem;
+    color: var(--main-fg-color);
+}
+
+pre:has(code) {
+    background-color: var(--main-highlight-color);
+}
+
+.lastupdate::after {
+    content: " 🍓 ";
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--main-header-color);
+}
+
+a {
+    color: var(--main-link-color);
+}
+
+a:hover,
+a:focus {
+    color:var(--hover-link-color);
+}
+
+a:active {
+    color: var(--active-link-color);
+}
+
+ul li ul {
+    list-style-type: square;
+}
+ul li ul li::marker {
+    color: var(--nested-ul-color);
+}
