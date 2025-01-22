@@ -8,7 +8,6 @@ A simple, quick blog template using [11ty](https://www.11ty.dev/)!
 ## Features:
 - Write locally, on your computer!
     - All you need is a terminal & a text editor
-    - Use whichever text program you want to edit your site
     - See your changes in realtime - no need to refresh
 - No HTML experience necessary!
     - Posts are written in Markdown, a really intuitive format
@@ -20,4 +19,4 @@ A simple, quick blog template using [11ty](https://www.11ty.dev/)!
 ### That sounds awesome!
 I think so, too! If you want to get started, you can hop into the quickstart guide, or read more about Strawberry Starter.
 
-If you're wondering why this site is formatted like a blog... it's because this site *is* the template!
+Oh, and if you're wondering why this site is formatted like a blog... it's because this site *is* the template! Neat, huh?
