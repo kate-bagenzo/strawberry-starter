@@ -4,7 +4,7 @@ date: 2024-01-20
 layout: layout.html
 ---
 A simple, quick blog template for [11ty](https://www.11ty.dev/)!
-![a pixellated strawberry](/assets/images/berrysprite.png)
+![pixel art of a strawberry](/assets/images/berrysprite.png)
 
 ## Features:
 - Write locally, on your computer!

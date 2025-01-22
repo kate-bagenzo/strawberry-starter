@@ -83,6 +83,8 @@ Here's an overview of the folders and files in Strawberry Starter. You can ignor
         - If you want to add a new blog post, add a .md file here.
     - `index.md`
         - This is the homepage of your blog.
+- `social.png`
+    - This appears in the preview card used to link to your blog on social media.
 - `.env`
     * This file isn't created by default (for security reasons).
     * Putting your Neocities API key here is necessary for `npm run upload` to work.
