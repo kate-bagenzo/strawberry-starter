@@ -7,6 +7,7 @@ import url from 'url';
 import qs from 'querystring';
 import FormData from 'form-data';
 
+// forked from https://github.com/neocities/neocities-node 🙇‍♀️
 function NeoCities(key, opts) {
   this.key = key
   this.opts = opts || {}
