@@ -6,6 +6,7 @@ import path from 'path';
 import url from 'url';
 import qs from 'querystring';
 import FormData from 'form-data';
+import { jsonc } from 'jsonc';
 
 // forked from https://github.com/neocities/neocities-node 🙇‍♀️
 function NeoCities(key, opts) {
@@ -99,7 +100,7 @@ NeoCities.prototype.upload = function(files, callback) {
 if (process.env.NEOCITIES) {
   const api = new NeoCities(process.env.NEOCITIES);
 
-  const config = JSON.parse(fs.readFileSync('src/_data/config.json', 'utf8'));
+  const config = jsonc.parse(fs.readFileSync('src/_data/config.jsonc', 'utf8'));
   const subDir = config['neoCitiesSubdirectory'];
   
   const toUpload = [];

@@ -1,12 +1,18 @@
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import fs from 'fs';
+import { jsonc } from "jsonc";
 
-const config = JSON.parse(fs.readFileSync('src/_data/config.json', 'utf8'));
+const config = jsonc.parse(fs.readFileSync('src/_data/config.jsonc', 'utf8'));
+console.log(config);
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/");
   eleventyConfig.addPassthroughCopy("src/social.png");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
+
+  eleventyConfig.addDataExtension("jsonc", (contents) => {
+		return jsonc.parse(contents);
+	});
 
   eleventyConfig.addPlugin(feedPlugin, {
 		type: "atom",

@@ -1,0 +1,34 @@
+// CONFIG
+{
+    // the name of your blog
+    // appears on the footer, the RSS feed, and the link preview (the little image when you link to your site on social media)
+    "siteName": "Strawberry Starter",
+
+    // a short description of your blog
+    // appears on the link preview
+    "siteDescription": "A simply-sweet blog template!",
+
+    // the public URL of your blog
+    // this is necessary for the link preview & RSS feed to function correctly
+    "siteURL": "https://strawberrystarter.neocities.org",
+
+    // your name
+    // appears on the footer
+    "siteAuthor": "Kate Bagenzo",
+
+    // a link where people can reach you - your personal site, your social media, etc...
+    // appears on the footer, but you can leave it blank if you don't want it to appear
+    // like this : "authorLink": "",
+    "authorLink": "https://katebagenzo.neocities.org",
+
+    // your email address
+    // appears on the footer, but you can leave it blank if you don't want it to appear
+    // like this : "authorContact": "",
+    "authorContact": "katebagenzo@gmail.com",
+
+    // the theme used by your blog
+    // themes are located in src/assets/styles/themes
+    // strawberry: the default theme
+    // plain: a very simple theme. perfect for tweaking yourself, if you know CSS
+    "siteStyle": "strawberry"
+}
