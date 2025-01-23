@@ -11,7 +11,12 @@ layout: head.html
         </ol>
     </nav>
     <main>
-        <h1>{{ title }}</h1>
+        <header>
+            <h1>{{ title }}</h1>
+            {% if page.url != "/" %}
+            <time>{{ i.data.date | dateDMY }}</time>
+            {% endif %}
+        </header>
         {{ content }}
         {% if page.url == '/'  and collections.posts%}
             <h2>Latest Posts:</h2>

@@ -16,6 +16,10 @@ body {
     margin-bottom: 2rem;
 }
 
+header h1 {
+    margin-bottom: 0.2rem;
+}
+
 nav ol {
     display: flex;
     gap: 1rem;
@@ -59,7 +63,9 @@ footer {
     padding-bottom: 0.5rem;
 }
 
-footer p {
+footer p,
+footer address,
+footer aside {
     margin: 0.1rem;
 }
 

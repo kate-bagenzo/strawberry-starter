@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run dev",
     "dev": "npx @11ty/eleventy --serve --port 1234",
     "build": "npx @11ty/eleventy",
     "upload": "node _functions/upload-neo.js"

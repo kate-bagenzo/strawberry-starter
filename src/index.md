@@ -1,6 +1,6 @@
 ---
 title: Welcome to Strawbery Starter!
-date: 2024-01-20
+date: 2024-01-01
 layout: layout.html
 ---
 A simple, quick blog template for [11ty](https://www.11ty.dev/)!
