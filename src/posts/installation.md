@@ -27,22 +27,19 @@ Go to the `src` folder. This is where your blog's files live.
 There's a lot of stuff here, but you don't need to worry about most it! For now, let's go to `_data` and open the file named `config.json`.  
 This file has information that appears in a few places in your blog. Right now it's all defaults so you should replace that data with your own!
 - `siteName`
-    - The name of your site. Appears on the footer & the link preview (i.e. the little image when you link to a site on social media or discord, etc).
+    - The name of your blog. Appears on the footer, the RSS feed, and the link preview (i.e. the little image when you link to a site on social media or discord, etc).
 - `siteDescription`
-    - A small description of your site. Appears on the link preview.
+    - A small description of your site. Appears on the link preview and RSS feed.
+- `siteURL`
+    - The public URL of your blog, e.g. (example.neocities.org) Needed for the link preview and RSS feed to function correctly.
 - `siteAuthor`
     - Your name. Appears on the footer.
-- `siteURL`
-    - The public URL where people can visit your blog. Needed for the link preview and RSS feed to function correctly.
 - `authorLink`
     - A link to your personal website or social media or etc. Appears on the footer. You can leave this blank if you prefer.
 - `authorContact`
-    - A link to your email. Appears on the footer. You can leave this blank if you prefer.
+    -Your email. Appears on the footer. You can leave this blank if you prefer.
 - `siteStyle`
     - The theme used by your blog. Themes are in located `src/assets/styles/themes/`. You can use (or edit) one of the premade themes, or create your own if you know CSS.
-- `neoCitiesSubdirectory`
-    - An optional subdirectory to upload your blog to when using `npm run upload`.
-        - For example: if this is set to `blog`, your site will be uploaded to `example.neocities.org/blog/` instead of `example.neocities.org`.
 
 ## Making posts
 Time to write your first post! Go to `src/posts` and create a new `.md` file. You can name it whatever you want, but keep in mind that the filename will become the URL to your post (e.g. this file is called "installation", so if it was uploaded to `example.neocities.org`, its URL would be "`example.neocities.org/posts/installation`").  
