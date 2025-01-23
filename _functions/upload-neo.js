@@ -1,4 +1,4 @@
-import 'dotenv/config';
+import dotenvFlow from 'dotenv-flow';
 import fs from 'fs';
 import http from 'http';
 import https from 'https';
@@ -7,6 +7,8 @@ import url from 'url';
 import qs from 'querystring';
 import FormData from 'form-data';
 import { jsonc } from 'jsonc';
+
+dotenvFlow.config();
 
 // forked from https://github.com/neocities/neocities-node 🙇‍♀️
 function NeoCities(key, opts) {
@@ -97,11 +99,9 @@ NeoCities.prototype.upload = function(files, callback) {
 }
 
 // let's rock!
-if (process.env.NEOCITIES) {
-  const api = new NeoCities(process.env.NEOCITIES);
-
-  const config = jsonc.parse(fs.readFileSync('src/_data/config.jsonc', 'utf8'));
-  const subDir = config['neoCitiesSubdirectory'];
+if (process.env.NEOCITIES_API) {
+  const api = new NeoCities(process.env.NEOCITIES_API);
+  const subDir = process.env.NEOCITIES_SUBDIRECTORY;
   
   const toUpload = [];
   fs.readdir('_site', {recursive: true, withFileTypes: true}, (err, files) => {
@@ -127,7 +127,8 @@ if (process.env.NEOCITIES) {
       }
   })
   
+} else if (process.env.NEOCITIES_API == "ABCD1234") {
+  throw new Error(`ERROR: Did you set your API key correctly? Check the user guide.`);
 } else {
-  console.log(`ERROR: Did you set your API key correctly?`);
-  console.log(`Check the user guide.`);
+  throw new Error(`ERROR: Something went really wrong. Your API key was not found.`);
 }
