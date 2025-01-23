@@ -18,6 +18,6 @@ A simple, quick blog template for [11ty](https://www.11ty.dev/)!
 
 
 ### That sounds awesome!
-I think so, too! If you want to get started, you can hop into the quickstart guide, or read more about Strawberry Starter.
+I think so, too! If you want to get started, you can read the [installation guide](posts/installation), or read more about Strawberry Starter.
 
 Oh, and if you're wondering why this site is formatted like a blog... it's because this site *is* the template! Neat, huh?
