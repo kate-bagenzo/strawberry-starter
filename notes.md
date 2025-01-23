@@ -1,8 +1,6 @@
 - posts not updating after first build issue???
 - you may need to explain (or just link to an explainer for) json itself: a very common source of error for a non webdev will be editing a comma/quote wrong in a json data file
-- your `config.json` documentation is in a different order than the actual template file
 
-- maybe overkill but i would consider `dotenv-flow` (https://www.npmjs.com/package/dotenv-flow) instead of raw `dotenv` since it automatically supports stuff like `.env.local`, `.env.production`. this is particularly useful bc you can un-gitignore and commit `.env` itself as a "template" with placeholders/comments explaining where to get the values amd how to override with a `.env.local` instead of having to find it in the docs
 - you may want to include some basic RSS style in the themes. it's a bit of a pain to style RSS but people often interpret the "this xml has no style information" thing browsers show as an error. not an issue for actual RSS users since they're familiar, but you'll have people who don't use RSS themselves making sites with this, and they might think they've set it up wrong
 - you've got language hard-coded, but probably better to pull this out to config
 - you're using hard-coded language inconsistently (sometimes `en-US`, sometimes `en-GB` (canadian coded))

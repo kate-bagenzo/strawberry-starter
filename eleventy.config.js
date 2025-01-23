@@ -21,6 +21,7 @@ export default function (eleventyConfig) {
 			name: "posts",
 			limit: 100,
 		},
+    stylesheet: "assets/styles/rss.xsl",
 		metadata: {
 			language: "en",
 			title: config.siteName,
