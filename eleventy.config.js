@@ -3,7 +3,6 @@ import fs from 'fs';
 import { jsonc } from "jsonc";
 
 const config = jsonc.parse(fs.readFileSync('src/_data/config.jsonc', 'utf8'));
-console.log(config);
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/");

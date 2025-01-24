@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "postinstall",
+    "prepare": "postinstall",
     "start": "npm run dev",
     "dev": "npx @11ty/eleventy --serve --port 1234",
     "build": "npx @11ty/eleventy",
@@ -13,12 +15,16 @@
   "author": "Kate Bagenzo",
   "license": "MIT",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy": "^3.0.1-alpha.3",
     "@11ty/eleventy-plugin-rss": "^2.0.3",
     "dotenv": "^16.4.7",
     "dotenv-flow": "^4.1.0",
     "form-data": "^4.0.1",
-    "jsonc": "^2.0.0"
+    "jsonc": "^2.0.0",
+    "postinstall": "^0.7.5"
+  },
+  "postinstall": {
+    "_functions/EleventyFiles.js": "copy node_modules/@11ty/eleventy/src/EleventyFiles.js"
   },
   "type": "module"
 }
