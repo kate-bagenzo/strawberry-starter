@@ -1,7 +1,7 @@
 :root {
     --main-bg-color: white;
     --main-fg-color: black;
-    --main-highlight-color: rgb(228, 228, 228);
+    --main-highlight-color: #e4e4e4;
 }
 
 nav,

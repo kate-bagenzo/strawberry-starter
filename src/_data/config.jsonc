@@ -28,7 +28,9 @@
 
     // the theme used by your blog
     // themes are located in src/assets/styles/themes
-    // strawberry: the default theme
-    // plain: a very simple theme. perfect for tweaking yourself, if you know CSS
-    "siteStyle": "strawberry"
+        // strawberry: the default theme
+        // wish: a purple, goth-y theme
+        // contrast: a high contrast black and white theme
+        // plain: a very simple theme. perfect for tweaking yourself, if you know CSS
+    "siteStyle": "beach"
 }
