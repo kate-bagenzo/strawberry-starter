@@ -5,5 +5,4 @@
 
 notes on the design:
 - the footer elements are misaligned: the first and third row have inline margins but the second doesn't
-- you may want to make "back to top" fixed instead of part of the footer
 - you may want to add `scrollbar-gutter: stable;` (always annoys me when you see this change on page navs for stuff otherwise clearly designed for scrolling the whole page lol)

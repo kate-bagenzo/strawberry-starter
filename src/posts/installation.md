@@ -54,7 +54,7 @@ The config contains data that appears in a few places in your blog. Take the tim
     - The theme used by your blog. Themes are located in `src/assets/styles/themes/`. You can use (or edit) one of the premade themes, or create your own if you know CSS.
 
 ### An aside on text editors
-You can use whatever text editor you want to edit! I like VS Code and Notepad++, but you can even use Notepad if you want. The only important thing is that it shouldn't be a *word processor* like Microsoft Writer or Libreoffice Writer.
+You can use whatever text editor you want to edit! I like VS Code and Notepad++, but you can even use Notepad if you want. The only important thing is that it shouldn't be a *word processor*, like Microsoft Word or Libreoffice Writer.
 
 ## Making posts
 Time to write your first post! Go to `src/posts` and create a new `.md` file. You can name it whatever you want, but keep in mind that the filename will become the URL to your post (e.g. post you're reading now is named "installation.md", so if it was uploaded to `example.neocities.org`, its URL would be "`example.neocities.org/posts/installation`").  

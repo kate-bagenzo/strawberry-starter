@@ -13,6 +13,10 @@
     --nested-ul-color: #6daa2c;
 }
 
+html {
+    scrollbar-color: var(--main-fg-color) var(--main-bg-color);
+}
+
 body {
     background-color: var(--main-bg-color);
     color: var(--main-fg-color);
