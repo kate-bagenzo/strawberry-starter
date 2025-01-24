@@ -83,9 +83,12 @@ a:active {
     color: var(--active-link-color);
 }
 
-ul li ul {
+ul li ul,
+ol li ul {
     list-style-type: square;
 }
-ul li ul li::marker {
+
+ul li ul li::marker,
+ol li ul li::marker {
     color: var(--nested-ul-color);
 }

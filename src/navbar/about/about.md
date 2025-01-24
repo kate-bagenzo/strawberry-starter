@@ -11,4 +11,9 @@ My hope for this template is that someone with little dev experience can downloa
     - Zonelets is a huge inspiration to me! Part of my design goals for Strawberry Starter was basically "Zonelets but without needing to write HTML".
 - [11ty](https://www.11ty.dev/)
     - Finally, static site generation that's good! This is the most intuitive SSG I've used and it has totally rekindled my love for webdev.
-- My friends who blog <3
+- [Foto](https://fotocopiadora.itch.io/)
+    - For helping me when I'm most frustrated and being wonderful.
+- [Sean](https://seans.site/)
+    - For always taking a look at my code, fixing bugs, and teaching me lots.
+- My friends who blog
+    - For being excited about this project and cheering me on!

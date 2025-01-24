@@ -10,39 +10,54 @@ Here's how to get started with your new blog:
     - Node is a javascript runtime that lets you create things for the web.
     - Grab it from the [node website](https://nodejs.org/en).
 3. **Open a Command Line in Strawberry Starter's folder**
-    - On Windows: I recommend you use Powershell.
-    - macOS & Linux: These systems have a builtin terminal.
-4. **Execute the command: `npm i`**
-    - If you don't see any errors, then congrats! You can now blog to your heart's content.
+    - Never used one? It's a program that lets you type computer commands.
+        - Windows: Powershell is built-in, and what I recommend you use. If you're familiar with the "Command Prompt", that'll also work, but it's not recommended for a variety of reasons.
+        - macOS: The program is just called Terminal. Simple!
+        - Linux: You definitely have it, but it's called something different depending on what kind of Linux you're running. Search for "Terminal" or "Shell".
+    - You can probably open your chosen command line by right clicking the open folder and selecting "Open a Terminal", but if not, open one of these programs and type `cd path/to/template/`, where `path/to/template` is the path you unzipped Strawberry Starter to.
+4. **Execute the command: `npm install`**
+    - You'll see some output, and probably some warnings and notifications. Unless you see a big ERROR, you should be okay.
+    - > On Windows: You might get a Powershell error here! If it says you don't have permission to run scripts, then copy and paste this command:
+         - > `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted`
+         - > You can right click -> paste this, or paste it with CTRL+SHIFT+V. Command lines are finnicky and won't let you copy or paste with the usual shortcuts!
+         - > Then, try `npm install` again.
 
-You only need to run `npm i` once to setup your blog. Now you're ready to start posting!
+You only need to run `npm install` once to setup. Now you're ready to start blogging!
 
 ## Starting the development server
 Strawberry Starter has a live server you can run to preview your changes as you make them. It's super convenient!  
 Start the server with the command `npm run dev`. Now, open [`localhost:1234`](localhost:1234/) in your browser.  
 This is a preview of what your blog looks like, and it'll update automatically (no refreshes required)!
+> On Windows, you might see a firewall permission prompt. Allow the script to bypass the firewall, or it won't work.
+To stop the dev server, open the Command Line and press CTRL+C.
 
 ## Renaming & customizing your blog
 Go to the `src` folder. This is where your blog's files live.  
-There's a lot of stuff here, but you don't need to worry about most it! For now, let's go to `_data` and open the file named `config.json`.  
-This file has information that appears in a few places in your blog. Right now it's all defaults so you should replace that data with your own!
+There's a lot of stuff here, but you don't need to worry about most it! For now, let's go to `_data` and open the file named `config.jsonc`.  
+If you've never seen a `.json` or `.jsonc` file before - it's not complicated! It's just a way to store text so that it can be easily read by programs. The format is always the same: a bunch of `keys` and `values`, paired like so: `"key": "value",`.  
+Note the quotation marks and the comma! All of the key value pairs (except for the last) must have a comma. The keys and values must also be enclosed with quotation marks. Be sure not to change that while editing your config, or your blog will stop working!
+
+The config contains data that appears in a few places in your blog. Take the time now to replace the defaults, being careful not to disturb any quotation marks or commas:
 - `siteName`
-    - The name of your blog. Appears on the footer, the RSS feed, and the link preview (i.e. the little image when you link to a site on social media or discord, etc).
+    - The name of your blog. Appears on the footer, the RSS feed, and the link preview (i.e. the little image when you link to a site on social media).
 - `siteDescription`
-    - A small description of your site. Appears on the link preview and RSS feed.
+    - A small description of your site. Appears on the RSS feed.
 - `siteURL`
-    - The public URL of your blog, e.g. (example.neocities.org) Needed for the link preview and RSS feed to function correctly.
+    - The public URL of your blog, e.g. (example.neocities.org) *Required* for the link preview and RSS feed to function correctly.
 - `siteAuthor`
-    - Your name. Appears on the footer.
+    - Your name. Appears on the footer and RSS feed.
 - `authorLink`
-    - A link to your personal website or social media or etc. Appears on the footer. You can leave this blank if you prefer.
+    - A link to your personal website or social media. Appears on the footer. You can leave this blank if you prefer.
 - `authorContact`
     -Your email. Appears on the footer. You can leave this blank if you prefer.
 - `siteStyle`
-    - The theme used by your blog. Themes are in located `src/assets/styles/themes/`. You can use (or edit) one of the premade themes, or create your own if you know CSS.
+    - The theme used by your blog. Themes are located in `src/assets/styles/themes/`. You can use (or edit) one of the premade themes, or create your own if you know CSS.
+
+### An aside on text editors
+You can use whatever text editor you want to edit! I like VS Code and Notepad++, but you can even use Notepad if you want. The only important thing is that it shouldn't be a *word processor* like Microsoft Writer or Libreoffice Writer.
 
 ## Making posts
-Time to write your first post! Go to `src/posts` and create a new `.md` file. You can name it whatever you want, but keep in mind that the filename will become the URL to your post (e.g. this file is called "installation", so if it was uploaded to `example.neocities.org`, its URL would be "`example.neocities.org/posts/installation`").  
+Time to write your first post! Go to `src/posts` and create a new `.md` file. You can name it whatever you want, but keep in mind that the filename will become the URL to your post (e.g. post you're reading now is named "installation.md", so if it was uploaded to `example.neocities.org`, its URL would be "`example.neocities.org/posts/installation`").  
 Blog posts start with a little thing called *front matter*. It looks like this:
 ```
 ---
@@ -51,7 +66,7 @@ date: 2025-12-25
 ---
 ```
 The title appears as a header on the post page, and also on internal links (on the frontpage's "Latest posts" section and the "All posts" page).  
-The date is actually optional - if it's not present, the file creation date will be used. This can cause some issues if you backup your posts somewhere and then reupload them - the file creation date might change! I recommend you always manually set the date.  
+The date is actually optional - if it's not present, the file creation date will be used. This can cause some issues if you backup your posts somewhere and then reupload them - the file creation date might change! I highly recommend you always manually set the date.  
 Create a new post now - give it a title and today's date. When you save the file, you should see it appear on the dev server.
 
 ## The index and navbar
@@ -66,7 +81,7 @@ There are some other pages on your site besides blog posts, though! You'll notic
 There are two last things you want to customize:
 - The favicon, which appears in the browser tab and bookmarks.
     - Found at `src/favicon.ico`
-- The Opengraph preview, which appears when you link to your blog on some sites, like social media.
+- The link preview, which appears when you link to your blog on some sites, like social media.
     - Found at `src/social.png`
 
 Both of these are images you can edit in any graphics editor. Don't change their filenames or formats!
@@ -80,14 +95,10 @@ If you're going to use Neocities, Strawberry Starter can instead automatically u
 3. **Copy your API key**.
     - If you haven't generated an API key, do so now by pressing the button.
     - Keep this safe! Don't share it with anyone, or they can edit your site.
-4. **Create a `.env` file in the base of Strawberry Starter**
-    - This means in Strawberry Starter's main folder, NOT in `src`.
-    - The file is just called `.env` - exactly like that.
-5. **Copy the following into the file:**
-    - `NEOCITIES="1234ABCD"`
-        - Replace `1234ABCD` with your API key.
+4. **Open the `.env` file in the base of your blog and follow its instructions.**
+    - Don't edit `.env` itself! It's just a template of what your `.env.local` should look like, and should be kept that way to ensure your API key stays safe.
 
-If you followed the above steps correctly, you should be able to use `npm run upload` now! That command also builds your site, so if you're uploading to neocities this way, you don't need to run `npm run build`.  
-By default, this pushes directly to your site's homepage. If you're just using your neocities for your blog, that's fine, but if you have other pages on your site, be sure to set the `neoCitiesSubdirectory` in `config.json` to something else! Otherwise, the upload command will overwrite your files.
+If you followed the above steps correctly, you should be able to use `npm run upload`! That command also builds your site, so if you're uploading to neocities this way, you don't need to run `npm run build`.  
+By default, this pushes directly to your site's homepage. If you're just using your neocities for your blog, that's fine, but if you have other pages on your site, be sure to set the `NEOCITIES_SUBDIRECTORY` field in `.env.local` to something else!
 
 You should now have everything you need for a successful blog. Go forth - delete these starter posts, rewrite the about page, the sky is the limit! Have fun blogging!

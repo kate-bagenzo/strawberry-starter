@@ -65,8 +65,7 @@ To create a link, like, for example, [one to my site](https://bagenzos.house), j
 
 ## Images
 Images are fundamental to any blog, right?  
-It's similar to the link syntax, except the square brackets are for alt text, and the round brackets are for the file path.  
-Also, you need an exclamation mark!
+It's similar to the link syntax, except the square brackets are for alt text, and the round brackets are for the file path. Also, don't forget the exclamation mark!
 ![A delicious bowl of strawberries](/assets/images/bowl_of_berries.jpg)
 
 ## HTML

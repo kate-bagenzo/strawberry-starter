@@ -18,7 +18,7 @@ This page explains how to do various things. You can find more step-by-step inst
     - Your site is now built and ready for export in the `_site` folder!
         - OR, you can upload directly to Neocities with `npm run upload`! Requires some setup - see installation guide.
 
-## Anatomy of Config.json
+## Anatomy of Config.jsonc
 - `siteName`
     - The name of your blog. Appears on the footer, the RSS feed, and the link preview (i.e. the little image when you link to a site on social media or discord, etc).
 - `siteDescription`
@@ -35,7 +35,7 @@ This page explains how to do various things. You can find more step-by-step inst
     - The theme used by your blog. Themes are in located `src/assets/styles/themes/`. You can use (or edit) one of the premade themes, or create your own if you know CSS.
 
 ## Commands
-- `npm i`
+- `npm install`
     - This installs dependencies that your blog needs to function.
     - You only need to run this once.
 - `npm run dev`
@@ -58,14 +58,14 @@ This page explains how to do various things. You can find more step-by-step inst
 ### Detailed Folder Layout Reference
 Here's an overview of the folders and files in Strawberry Starter. You can ignore most of these and have a perfectly functional blog, but if you're curious and/or brave:
 - `_functions/`
-    - Contains various scripts run by Node during the site's build.
+    - Contains various scripts run by Node during the site's build and install.
 - `_site/`
     - Destination folder for your finished site after running `npm run build` or `npm run upload`.
 - `node_modules/`
     - Contains various node packages and dependencies.
 - `src/`
     - `_data/`
-        - `config.json`
+        - `config.jsonc`
             - Contains various variables used throughout your blog.
     - `_includes/`
         - Contains HTML files that create the layout of your blog.
@@ -83,6 +83,8 @@ Here's an overview of the folders and files in Strawberry Starter. You can ignor
 - `social.png`
     - This appears in the preview card used to link to your blog on social media.
 - `.env`
+    - This is a template showing what a proper `.env.local` file should look like.
+- `.env.local`
     * This file isn't created by default (for security reasons).
     * Putting your Neocities API key here is necessary for `npm run upload` to work.
 - `.gitignore`
@@ -91,3 +93,5 @@ Here's an overview of the folders and files in Strawberry Starter. You can ignor
     * Config file for 11ty.
 - `package.json`
     * Config file for Node.
+
+Since you looked, if you're **really** curious... why not go to [the 11ty homepage](https://www.11ty.dev/) and learn even more about how it works?
