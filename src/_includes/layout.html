@@ -29,6 +29,25 @@ layout: head.html
             </ol>
         {% endif %}
     </main>
+    {% assign previousPost = collections.posts | getPreviousCollectionItem %}
+    {% assign nextPost = collections.posts | getNextCollectionItem %}
+    {% if previousPost or nextPost %}
+    <nav id="pagination">
+        {% if previousPost %}
+        <section class="pagectrl pageprev">
+            <p>Previous:</p>
+            <a href="{{ previousPost.url }}"><p>{{ previousPost.data.title }}</p><time>{{ previousPost.date | dateDMY }}</time></a>
+        </section>
+        {% endif %}
+
+        {% if nextPost %}
+        <section class="pagectrl pagenext">
+            <p>Next:</p>
+            <a href="{{ nextPost.url }}"><p>{{ nextPost.data.title }}</p><time>{{ nextPost.date | dateDMY }}</time></a>
+        </section>
+        {% endif %}
+    </nav>
+    {% endif %}
     <footer>
         <p>
             {{ config.siteName }} is written by 

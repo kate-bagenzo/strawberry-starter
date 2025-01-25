@@ -45,15 +45,7 @@ This page explains how to do various things. You can find more step-by-step inst
     - This command outputs your blog's files to the `_site/` folder.
 - `npm run upload`
     - This command will build your site (as if you had typed `npm run build`), and then upload your site directly to Neocities.
-    - However, it won't work out of the box. First:
-        1. Go to the [Neocities settings page](https://neocities.org/settings).
-        2. Select "Manage site settings", then "API".
-        3. Copy your API key.
-            - If this is your first time on this page, you'll need to generate the key first.
-        4. Create a file named `.env` at the top level of Strawberry Starter's folder.
-            - This means inside the folder, NOT inside `src/`
-        5. Write `NEOCITIES="ABCD1234"` into the `.env` file.
-            - Replace `ABCD1234` with your actual API key.
+    - However, it won't work out of the box. Check the [installation guide](/posts/installation) and the `.env` file for more info.
 
 ### Detailed Folder Layout Reference
 Here's an overview of the folders and files in Strawberry Starter. You can ignore most of these and have a perfectly functional blog, but if you're curious and/or brave:

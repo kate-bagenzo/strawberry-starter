@@ -89,7 +89,7 @@ Both of these are images you can edit in any graphics editor. Don't change their
 ## Building and uploading your blog
 To get your blog ready for uploading somewhere, go to the command line and type `npm run build`. A folder called `_site` will appear. That folder is your completed blog, and is ready to be uploaded to whatever hosting provider you choose!
 
-If you're going to use Neocities, Strawberry Starter can instead automatically upload your site there by using the command `npm run upload`! However, it requires a bit of setup, so follow these steps:
+[Neocities](https://neocities.org/) is a cool hosting provider with a free tier! If you're going to use Neocities, Strawberry Starter can instead automatically upload your site there by using the command `npm run upload`! However, it requires a bit of setup, so follow these steps:
 1. **[Go to your Neocities account settings](https://neocities.org/settings#sites)**
 2. **Click "manage site settings", then "API".**
 3. **Copy your API key**.

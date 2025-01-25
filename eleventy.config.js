@@ -36,21 +36,13 @@ export default function (eleventyConfig) {
   eleventyConfig.addGlobalData('lastUpdate', () => {
     let now = new Date();
     return new Intl.DateTimeFormat(
-      'en-US', { dateStyle: 'medium' }
+      'en', { dateStyle: 'medium' }
     ).format(now);
   });
 
   eleventyConfig.addFilter("dateDMY", function(value) {
   const converted = new Intl.DateTimeFormat('en-GB', {
-      dateStyle: "short"
-    }).format(value);
-  return converted;
-  });
-
-  eleventyConfig.addFilter("dateMY", function(value) {
-  const converted = new Intl.DateTimeFormat('en-GB', {
-    month: 'numeric',
-    year: '2-digit'
+      dateStyle: "short",
     }).format(value);
   return converted;
   });

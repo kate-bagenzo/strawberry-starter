@@ -29,6 +29,14 @@ footer a {
     color: var(--main-bg-color);
 }
 
+#pagination {
+    background-color: var(--main-bg-color);
+    color: var(--main-fg-color);
+}
+#pagination a {
+    color: var(--main-fg-color);
+}
+
 main {
     border: 2px solid var(--main-fg-color);
     border-top: none;

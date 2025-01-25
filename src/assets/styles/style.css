@@ -63,6 +63,25 @@ pre {
     overflow: scroll;
 }
 
+#pagination {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagectrl {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.pagenext {
+    margin-left: auto;
+}
+
+.pagectrl p {
+    margin: 0;
+}
+
 footer {
     font-size: 0.8rem;
     padding-top: 0.5rem;
