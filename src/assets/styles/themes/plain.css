@@ -10,7 +10,7 @@ footer {
     border: 1px solid var(--main-fg-color);
 }
 
-nav {
+nav, main {
     border-bottom: none;
 }
 
@@ -27,8 +27,4 @@ code {
 
 pre:has(code) {
     background-color: var(--main-highlight-color);
-}
-
-footer {
-    border-top: none;
 }

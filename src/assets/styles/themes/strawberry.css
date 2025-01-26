@@ -40,9 +40,13 @@ nav, main {
     border-bottom-left-radius: 0;
 }
 
-footer, main {
+footer, main, #pagination {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+}
+
+#pagination {
+    border-bottom: none;
 }
 
 img[src='/assets/images/berrysprite.png'] {

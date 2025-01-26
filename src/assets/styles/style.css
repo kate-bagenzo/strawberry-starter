@@ -118,3 +118,8 @@ iframe {
     align-items: center;
     max-width: 100%;
 }
+
+img[src='/assets/images/berrysprite.png'] {
+    float: right;
+    padding-right: 1rem;
+}
