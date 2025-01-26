@@ -86,3 +86,7 @@ pre:has(code) {
 .lastupdate::after {
     content: " ◉ ";
 }
+
+img[src='/assets/images/berrysprite.png'] {
+    filter: sepia(100%);
+}
