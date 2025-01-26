@@ -9,10 +9,10 @@ A simple, quick blog template for [11ty](https://www.11ty.dev/)!
 ## Features:
 - Write locally, on your computer!
     - All you need is a terminal & your favorite text editor
-    - See your changes in realtime with a dev server!
+    - See your changes in realtime with a development server!
 - No HTML experience necessary!
     - Posts are written in Markdown, a really intuitive format
-    - Only write HTML if you really want to
+    - Only edit HTML if you really want to
 - One-command upload to [Neocities](https://neocities.org/)
     - Upload directly to a site or to a subdirectory
 

@@ -29,7 +29,6 @@ Strawberry Starter has a live server you can run to preview your changes as you 
 Start the server with the command `npm run dev`. Now, open [`localhost:1234`](localhost:1234/) in your browser.  
 This is a preview of what your blog looks like, and it'll update automatically (no refreshes required)!
 > On Windows, you might see a firewall permission prompt. Allow the script to bypass the firewall, or it won't work.
-To stop the dev server, open the Command Line and press CTRL+C.
 
 ## Renaming & customizing your blog
 Go to the `src` folder. This is where your blog's files live.  
@@ -41,11 +40,13 @@ The config contains data that appears in a few places in your blog. Take the tim
 - `siteName`
     - The name of your blog. Appears on the footer, the RSS feed, and the link preview (i.e. the little image when you link to a site on social media).
 - `siteDescription`
-    - A small description of your site. Appears on the RSS feed.
+    - A small description of your blog. Appears on the RSS feed.
 - `siteURL`
     - The public URL of your blog, e.g. (example.neocities.org) *Required* for the link preview and RSS feed to function correctly.
 - `siteAuthor`
     - Your name. Appears on the footer and RSS feed.
+- `siteLang`
+    - A two-letter code indicating what language your blog is in. Used internally for various things.
 - `authorLink`
     - A link to your personal website or social media. Appears on the footer. You can leave this blank if you prefer.
 - `authorContact`
@@ -87,7 +88,7 @@ There are two last things you want to customize:
 Both of these are images you can edit in any graphics editor. Don't change their filenames or formats!
 
 ## Building and uploading your blog
-To get your blog ready for uploading somewhere, go to the command line and type `npm run build`. A folder called `_site` will appear. That folder is your completed blog, and is ready to be uploaded to whatever hosting provider you choose!
+To get your blog ready for uploading somewhere, go to the command line and type `npm run build`. (If the dev server is still running, you can stop it with CTRL+C first.) A folder called `_site` will appear. That folder is your completed blog, and is ready to be uploaded to whatever hosting provider you choose!
 
 [Neocities](https://neocities.org/) is a cool hosting provider with a free tier! If you're going to use Neocities, Strawberry Starter can instead automatically upload your site there by using the command `npm run upload`! However, it requires a bit of setup, so follow these steps:
 1. **[Go to your Neocities account settings](https://neocities.org/settings#sites)**

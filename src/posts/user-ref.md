@@ -27,6 +27,8 @@ This page explains how to do various things. You can find more step-by-step inst
     - The public URL of your blog, e.g. (example.neocities.org) Needed for the link preview and RSS feed to function correctly.
 - `siteAuthor`
     - Your name. Appears on the footer.
+- `siteLang`
+    - A two-letter code indicating what language your blog is in. Used internally for various things.
 - `authorLink`
     - A link to your personal website or social media or etc. Appears on the footer. You can leave this blank if you prefer.
 - `authorContact`

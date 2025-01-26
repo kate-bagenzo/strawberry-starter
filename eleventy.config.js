@@ -22,7 +22,7 @@ export default function (eleventyConfig) {
 		},
     stylesheet: "assets/styles/rss.xsl",
 		metadata: {
-			language: "en",
+			language: config.siteLang,
 			title: config.siteName,
 			subtitle: config.siteDescription,
 			base: config.siteURL,

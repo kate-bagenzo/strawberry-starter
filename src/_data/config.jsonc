@@ -15,6 +15,12 @@
     // your name
     // appears on the footer
     "siteAuthor": "Kate Bagenzo",
+    
+    // a two letter locale code indicating your site's primary language
+    // e.g. "en", "fr", "es"... for a full list see https://www.w3schools.com/tags/ref_language_codes.asp
+    // can use commas and space to add multiple i.e. "en, fr"
+    // appears internally on pages + RSS, which helps users & search engines find your page
+    "siteLang": "en",
 
     // a link where people can reach you - your personal site, your social media, etc...
     // appears on the footer, but you can leave it blank if you don't want it to appear
@@ -29,8 +35,9 @@
     // the theme used by your blog
     // themes are located in src/assets/styles/themes
         // strawberry: the default theme
+        // contrast: a sleek, high contrast black & white theme
         // wish: a purple, goth-y theme
-        // contrast: a high contrast black and white theme
-        // plain: a very simple theme. perfect for tweaking yourself, if you know CSS
+        // beach: a blue, nostalgic theme
+        // plain: a minimal theme - very basic, a template for you to make your own theme
     "siteStyle": "contrast"
 }

@@ -13,7 +13,8 @@ layout: head.html
     <main>
         <header>
             <h1>{{ title }}</h1>
-            {% if page.url != "/" %}
+            {% assign postCheck = collections.posts | getCollectionItem %}
+            {% if postCheck %}
             <time>{{ i.data.date | dateDMY }}</time>
             {% endif %}
         </header>

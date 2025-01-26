@@ -3,8 +3,9 @@
     src: url('/assets/fonts/roboto.ttf');
 }
 :root {
-    --main-bg-color: black;
-    --main-fg-color: white;
+    /* tweak these hex codes to change the colors! */
+    --main-bg-color: #000;
+    --main-fg-color: #fff;
 }
 
 html {
