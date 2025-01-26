@@ -33,7 +33,7 @@ a:hover {
     opacity: 50%;
 }
 
-main a:active {
+a:active {
     opacity: 100%;
     color: var(--main-text-color);
 }
@@ -81,4 +81,8 @@ pre:has(code) {
 
 #pagination a {
     color: var(--main-fg-color);
+}
+
+.lastupdate::after {
+    content: " ◉ ";
 }
