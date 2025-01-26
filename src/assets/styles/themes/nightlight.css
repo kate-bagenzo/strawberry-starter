@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('/assets/fonts/notoserif.ttf');
+}
+
+:root {
+    --main-bg-color: #987F8C;
+    --secondary-bg-color: #EEEEDD;
+    --tertiary-bg-color: #c7b2bc;
+    --main-fg-color: #324036;
+}
+
+html {
+    font-family: 'Noto Serif', 'sans-serif';
+}
+
+body {
+    background-color: var(--main-bg-color);
+    background-image: 
+    radial-gradient(var(--tertiary-bg-color) 14%, transparent 14.4%),
+    radial-gradient(var(--tertiary-bg-color) 14%, transparent 14.4%);
+    background-position: 0px 0px, 104px 104px;
+    background-size: 208px 208px;
+    background-color: var(--main-bg-color);
+}
+
+main {
+    background-color: var(--secondary-bg-color);
+}
+
+main a {
+    color: var(--main-fg-color);
+}
+
+a:focus,
+a:hover {
+    opacity: 50%;
+}
+
+a:active {
+    color: var(--main-bg-color);
+    opacity: 100%;
+}
+
+nav, footer {
+    background-color: var(--main-fg-color);
+    color: var(--secondary-bg-color);
+}
+
+nav a,
+footer a {
+    color: var(--secondary-bg-color);
+}
+
+nav,
+main,
+footer {
+    border: 1px solid var(--main-fg-color);
+}
+
+nav, main {
+    border-bottom: none;
+}
+
+blockquote {
+    margin-left: 0;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--main-bg-color);
+}
+
+code {
+    background-color: var(--main-fg-color);
+    color: var(--secondary-bg-color);
+    padding: 0.1rem;
+}
+
+pre:has(code) {
+    background-color: var(--main-fg-color);
+    color: var(--secondary-bg-color);
+}
+
+#pagination {
+    background-color: var(--secondary-bg-color);
+    color: var(--main-fg-color);
+}
+
+#pagination a {
+    color: var(--main-fg-color);
+}
+
+.lastupdate::after {
+    content: " ◯ ";
+}
