@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/assets/fonts/roboto.ttf');
+}
+
+:root {
+    --main-bg-color: #F1E3C9;
+    --secondary-bg-color: #161925;
+    --main-fg-color: #23395B;
+    --main-highlight-color: #f5f5f5;
+}
+
+html {
+    font-family: 'Roboto', 'sans-serif';
+}
+
+body {
+    background-color: var(--secondary-bg-color);
+}
+
+main {
+    background-color: var(--main-bg-color);
+    color: var(--secondary-bg-color);
+}
+
+nav,
+main,
+footer {
+    border: 1px solid var(--main-fg-color);
+}
+
+nav, footer {
+    background-color: var(--main-fg-color);
+    color: var(--main-highlight-color);
+}
+
+nav a,
+footer a {
+    color: var(--main-highlight-color);
+}
+
+nav {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+footer {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+main a {
+    color: var(--main-fg-color);
+}
+
+a:focus,
+a:hover {
+    opacity: 50%;
+}
+
+a:active {
+    opacity: 100%;
+    color: var(--secondary-bg-color);
+}
+
+nav, main {
+    border-bottom: none;
+}
+
+blockquote {
+    margin-left: 0;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--main-fg-color);
+}
+
+code {
+    background-color: var(--secondary-bg-color);
+    color: var(--main-bg-color);
+    padding: 0.1rem;
+}
+
+pre:has(code) {
+    background-color: var(--secondary-bg-color);
+}
+
+#pagination {
+    border-radius: 0;
+    border-bottom: 1px solid var(--main-bg-color);
+}
