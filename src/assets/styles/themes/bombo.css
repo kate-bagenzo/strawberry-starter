@@ -8,11 +8,12 @@
 }
 
 :root {
-    --main-bg-color: #266757;
-    --main-fg-color: #18292b;
+    --main-bg-color: #328671;
+    --main-fg-color: #0A0A0A;
+    --secondary-fg-color: #18292b;
     --main-border-color: #5d8e82;
     --main-highlight-color: #283150;
-    --secondary-highlight-color: #235c4f;
+    --secondary-highlight-color: #266657;
 }
 
 
@@ -33,7 +34,7 @@ header h1 {
 
 body {
     background-color: var(--main-fg-color);
-    background-image: linear-gradient(var(--main-highlight-color), var(--main-fg-color) 10%);
+    background-image: linear-gradient(var(--main-highlight-color), var(--secondary-fg-color) 10%);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top left;
@@ -116,6 +117,7 @@ pre:has(code) {
     border-right: 1px solid var(--main-border-color);
     padding-top: 0;
     color: var(--main-fg-color);
+    background-image: linear-gradient( var(--secondary-highlight-color), var(--main-bg-color) 20%);
 }
 
 #pagination a {

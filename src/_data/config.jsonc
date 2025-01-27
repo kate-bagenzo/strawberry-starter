@@ -38,6 +38,8 @@
         // contrast: a sleek, high contrast black & white theme.
         // bark: a green & brown autumnal theme with a serif font.
         // nightlight: a purple polka dot theme with a serif font.
+        // ocean: a dark blue theme with a sans-serif font.
+        // bombo: a deep forest green theme with gradients.
         // plain: a minimal theme - very basic, a template for you to make your own theme
     "siteStyle": "bombo"
 }
