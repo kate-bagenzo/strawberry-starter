@@ -4,6 +4,11 @@
     --main-highlight-color: #e4e4e4;
 }
 
+main {
+    background-color: var(--main-bg-color);
+    color: var(--main-fg-color);
+}
+
 nav,
 main,
 footer {
