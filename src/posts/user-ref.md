@@ -32,7 +32,7 @@ This page explains how to do various things. You can find more step-by-step inst
 - `authorLink`
     - A link to your personal website or social media or etc. Appears on the footer. You can leave this blank if you prefer.
 - `authorContact`
-    -Your email. Appears on the footer. You can leave this blank if you prefer.
+    - Your email. Appears on the footer. You can leave this blank if you prefer.
 - `siteStyle`
     - The theme used by your blog. Themes are in located `src/assets/styles/themes/`. You can use (or edit) one of the premade themes, or create your own if you know CSS.
 
