@@ -36,10 +36,12 @@
     // themes are located in src/assets/styles/themes
         // strawberry: the default theme
         // contrast: a sleek, high contrast black & white theme.
-        // bark: a green & brown autumnal theme with a serif font.
-        // nightlight: a purple polka dot theme with a serif font.
-        // ocean: a dark blue theme with a sans-serif font.
-        // bombo: a deep forest green theme with gradients.
+        // bark: a green & brown autumnal theme.
+        // nightlight: a purple polka dot theme.
+        // ocean: a dark blue theme.
+        // morning: a crisp orange theme.
+        // bombo: a deep forest green theme with gradients. (designed by fotocopiadora!)
         // plain: a minimal theme - very basic, a template for you to make your own theme
-    "siteStyle": "bombo"
+    // feel free to look inside the theme files and customize them - it's not hard to edit simple things, like the colors!
+    "siteStyle": "morning"
 }

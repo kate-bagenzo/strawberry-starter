@@ -1,5 +1,5 @@
 ---
-title: Welcome to Strawbery Starter!
+title: Welcome to Strawberry Starter!
 date: 2024-01-01
 layout: layout.html
 ---

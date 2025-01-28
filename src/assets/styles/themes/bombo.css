@@ -16,6 +16,14 @@
     --secondary-highlight-color: #266657;
 }
 
+html {
+    scrollbar-color: var(--main-bg-color) #00000000;
+}
+
+html, body {
+    min-height: 100%;
+}
+
 
 header {
     padding: 0;
@@ -34,7 +42,7 @@ header h1 {
 
 body {
     background-color: var(--main-fg-color);
-    background-image: linear-gradient(var(--main-highlight-color), var(--secondary-fg-color) 10%);
+    background-image: linear-gradient(var(--main-highlight-color), var(--secondary-fg-color) 10rem);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top left;
@@ -115,13 +123,15 @@ pre:has(code) {
 #pagination {
     background-color: var(--main-bg-color);
     border-right: 1px solid var(--main-border-color);
-    padding-top: 0;
+    padding-top: 1rem;
     color: var(--main-fg-color);
     background-image: linear-gradient( var(--secondary-highlight-color), var(--main-bg-color) 20%);
+    font-size: 1rem;
 }
 
 #pagination a {
     color: var(--main-fg-color);
+    text-decoration: underline;
 }
 
 .lastupdate::after {
