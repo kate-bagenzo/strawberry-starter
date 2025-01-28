@@ -11,32 +11,35 @@ Here's how to get started with your new blog:
     - Grab it from the [node website](https://nodejs.org/en).
 3. **Open a Command Line in Strawberry Starter's folder**
     - Never used one? It's a program that lets you type computer commands.
-        - Windows: Powershell is built-in, and what I recommend you use. If you're familiar with the "Command Prompt", that'll also work, but it's not recommended for a variety of reasons.
-        - macOS: The program is just called Terminal. Simple!
-        - Linux: You definitely have it, but it's called something different depending on what kind of Linux you're running. Search for "Terminal" or "Shell".
-    - You can probably open your chosen command line by right clicking the open folder and selecting "Open a Terminal", but if not, open one of these programs and type `cd path/to/template/`, where `path/to/template` is the path you unzipped Strawberry Starter to.
+        - **🪟 Windows**: Powershell is built-in, and what I recommend you use. If you're familiar with the "Command Prompt", that'll *probably* work, but it's not recommended for a variety of reasons.
+        - **🍎 macOS**: The program is just called Terminal. Simple!
+        - **🐧 Linux**: You definitely have it, but it's called something different depending on what kind of Linux you're running. Search for "Terminal" or "Shell".
+    - You can probably open your chosen command line in the folder by right clicking the open folder and selecting "Open a Terminal", but if not, open one of these programs and type `cd path/to/template/`, where `path/to/template` is the full path you unzipped Strawberry Starter to.
 4. **Execute the command: `npm install`**
     - You'll see some output, and probably some warnings and notifications. Unless you see a big ERROR, you should be okay.
-    - > On Windows: You might get a Powershell error here! If it says you don't have permission to run scripts, then copy and paste this command:
+    - > **🪟 On Windows**: You might get a Powershell error here! If it says you don't have permission to run scripts, then copy and paste this command:
          - > `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted`
          - > You can right click -> paste this, or paste it with CTRL+SHIFT+V. Command lines are finnicky and won't let you copy or paste with the usual shortcuts!
          - > Then, try `npm install` again.
+         - > If that doesn't work, try again, but running Powershell as admin.
 
 You only need to run `npm install` once to setup. Now you're ready to start blogging!
 
 ## Starting the development server
-Strawberry Starter has a live server you can run to preview your changes as you make them. It's super convenient!  
+There's a live server you can run to preview your changes as you make them. It's super convenient!  
 Start the server with the command `npm run dev`. Now, open [`localhost:1234`](localhost:1234/) in your browser.  
-This is a preview of what your blog looks like, and it'll update automatically (no refreshes required)!
-> On Windows, you might see a firewall permission prompt. Allow the script to bypass the firewall, or it won't work.
+This is a preview of what your blog looks like, and it'll update automatically as you save files.
+> **🪟 On Windows**: You might see a firewall permission prompt. Allow the script to bypass the firewall, or it won't work.
 
 ## Renaming & customizing your blog
 Go to the `src` folder. This is where your blog's files live.  
-There's a lot of stuff here, but you don't need to worry about most it! For now, let's go to `_data` and open the file named `config.jsonc`.  
-If you've never seen a `.json` or `.jsonc` file before - it's not complicated! It's just a way to store text so that it can be easily read by programs. The format is always the same: a bunch of `keys` and `values`, paired like so: `"key": "value",`.  
-Note the quotation marks and the comma! All of the key value pairs (except for the last) must have a comma. The keys and values must also be enclosed with quotation marks. Be sure not to change that while editing your config, or your blog will stop working!
+There's a lot of stuff here, but you don't need to worry about most it! For now, let's go to `_data` and open the file named `config.jsonc`.
+### A brief aside about JSON
+If you've never seen a `.json` or `.jsonc` file before - it's not complicated! It's just a way to store text so that it can be easily read by programs. The format is always the same: a bunch of `keys` and `values`, paired like so: `"key": "value",`. The entire list is contained within {curly braces}.
 
-The config contains data that appears in a few places in your blog. Take the time now to replace the defaults, being careful not to disturb any quotation marks or commas:
+Note the quotation marks and the comma! All of the key-value pairs (except for the last) must have a comma. The keys and values must also be enclosed with quotation marks. Be sure not to accidentally change that while editing your config file, or your blog will stop working!
+
+`config.jsonc` contains data that appears in a few places in your blog. Take the time now to replace the defaults, being careful not to disturb any quotation marks or commas or curly braces:
 - `siteName`
     - The name of your blog. Appears on the footer, the RSS feed, and the link preview (i.e. the little image when you link to a site on social media).
 - `siteDescription`
@@ -54,8 +57,8 @@ The config contains data that appears in a few places in your blog. Take the tim
 - `siteStyle`
     - The theme used by your blog. Themes are located in `src/assets/styles/themes/`. You can use (or edit) one of the premade themes, or create your own if you know CSS.
 
-### An aside on text editors
-You can use whatever text editor you want to edit! I like VS Code and Notepad++, but you can even use Notepad if you want. The only important thing is that it shouldn't be a *word processor*, like Microsoft Word or Libreoffice Writer.
+### An aside about text editors
+You can use whatever text editor you want to edit! I like VS Code or Notepad++, but you can even use Notepad if you want. The only important thing is that it shouldn't be a *word processor*, like Microsoft Word or Libreoffice Writer.
 
 ## Making posts
 Time to write your first post! Go to `src/posts` and create a new `.md` file. You can name it whatever you want, but keep in mind that the filename will become the URL to your post (e.g. post you're reading now is named "installation.md", so if it was uploaded to `example.neocities.org`, its URL would be "`example.neocities.org/posts/installation`").  

@@ -2,9 +2,9 @@
 title: Markdown Examples
 date: 2025-01-03
 ---
-Welcome to the Markdown guide! It's what you'll be writing your blog in, and it's pretty cool!
-This is an intuitive showcase of its features - you can open this post in a text editor and see how to do everything.
-I'd also recommend reading [a Markdown guide like this one](https://www.markdownguide.org/), or at least having it handy, so you can consult it when necessary.
+This post is a showcase of how to write Markdown, featuring various examples of the elements you can create. Open this post in a text editor so you can see exactly how they've been added.
+
+Additionally, I also recommend reading [a Markdown guide like this one](https://www.markdownguide.org/), or at least having it handy, so you can consult it when necessary.
 
 # Headings (this is level 1)
 ## Heading level 2
@@ -24,7 +24,7 @@ At the end of your sentence
 
 ## Strong Text and Emphasis
 You can use **double asterisks** for strong text, and *single asteriks* for emphasis.  
-Those will usually show up as bold and italics, but themes can override that!
+Those will usually show up as bold and italics, but themes/custom styling can override that!
 ***You can also use triple asterisks for both of them***.
 
 ## Blockquotes
@@ -48,7 +48,11 @@ Names for "Strawberry" in a few languages:
 - However
     - It's unordered
     - I think it's still cool
-- But you can disagree.
+- Don't you agree?
+
+* You can also use an asterisk.
+    * If you prefer.
+    - You can even mix the two!
 
 ## Code Blocks
 If you need to `code`, you can use `backticks`.
@@ -69,8 +73,8 @@ It's similar to the link syntax, except the square brackets are for alt text, an
 ![A delicious bowl of strawberries](/assets/images/bowl_of_berries.jpg)
 
 ## HTML
-<p>Finally, when Markdown just doesn't cut it, you CAN write HTML, if you really want to. Any valid HTML is also valid Markdown.</p>
+<p>Finally, when Markdown just doesn't cut it, you CAN write HTML, if you really want to. <em>Any valid HTML is also valid Markdown.</em></p>
 <p>You probably don't <em>want</em> to write HTML! But it does mean you can paste things in your posts like, for example, Youtube embeds!</p>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WEv5ZqkaS54?si=mcG95jGYfg2U0tdW&amp;controls=0&amp;start=12" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-That's it for this post! There's more you can do, but this covers most use cases. Be sure to read a markdown guide!
+That's it for this post! There's more you can do, but I think this covers most use cases. Be sure to read a full Markdown guide!

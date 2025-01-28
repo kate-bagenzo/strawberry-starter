@@ -56,7 +56,7 @@ Here's an overview of the folders and files in Strawberry Starter. You can ignor
 - `_site/`
     - Destination folder for your finished site after running `npm run build` or `npm run upload`.
 - `node_modules/`
-    - Contains various node packages and dependencies.
+    - Contains various Node packages and dependencies.
 - `src/`
     - `_data/`
         - `config.jsonc`
@@ -75,9 +75,9 @@ Here's an overview of the folders and files in Strawberry Starter. You can ignor
     - `index.md`
         - This is the homepage of your blog.
 - `social.png`
-    - This appears in the preview card used to link to your blog on social media.
+    - This image appears in the preview card used when linking to your blog on social media.
 - `.env`
-    - This is a template showing what a proper `.env.local` file should look like.
+    - This is a template explaining what a proper `.env.local` file should look like.
 - `.env.local`
     * This file isn't created by default (for security reasons).
     * Putting your Neocities API key here is necessary for `npm run upload` to work.
@@ -88,4 +88,4 @@ Here's an overview of the folders and files in Strawberry Starter. You can ignor
 - `package.json`
     * Config file for Node.
 
-Since you looked, if you're **really** curious... why not go to [the 11ty homepage](https://www.11ty.dev/) and learn even more about how it works?
+Since you looked, if you're **really** curious... why not go to [the 11ty homepage](https://www.11ty.dev/) and learn even more about how it works? This template is pretty basic and only scratches the surface. A warning, though - if you want to do something really complicated, you're probably better off starting from scratch!

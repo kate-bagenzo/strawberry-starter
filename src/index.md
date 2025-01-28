@@ -9,7 +9,7 @@ A simple, quick blog template for [11ty](https://www.11ty.dev/)!
 ## Features:
 - Write locally, on your computer!
     - All you need is a terminal & your favorite text editor
-    - See your changes in realtime with a development server!
+    - See your changes in realtime with a local web server!
 - No HTML experience necessary!
     - Posts are written in Markdown, a really intuitive format
     - Only edit HTML if you really want to
@@ -18,4 +18,4 @@ A simple, quick blog template for [11ty](https://www.11ty.dev/)!
 
 
 ### That sounds awesome!
-I think so, too! If you want to get started, you can read the [installation guide](posts/installation), but feel free to click around instead. If you're wondering why this site is structured like a blog, it's because it *is* the template! Neat, huh?
+I think so, too! If you want to get started, you can read the [installation guide](posts/installation), but feel free to click around and explore instead. If you're wondering why this site is structured like a blog, it's because it *is* the template! Neat, huh?
