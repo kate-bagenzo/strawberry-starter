@@ -1,7 +1,34 @@
+/* COLORS
+You can edit these and use them! Use css color names (e.g. "red", "purple") or hex codes (e.g. #00ff00). */
 :root {
     --main-bg-color: white;
     --main-fg-color: black;
     --main-highlight-color: #e4e4e4;
+}
+
+/* A brief explanation of the template's layout:
+HTML - Properties here affect the entire layout.
+    BODY
+    NAV - The bar containing links to the homepage, all posts, about, etc...
+        OL - Container for an ordered list of the links.
+            LI - Container for each individual link.
+                A - A link to another page.
+    MAIN - The main view, where each post appears.
+        HEADER - Container for the title and date of each post.
+    NAV #pagination - (Only on blog posts) Container for links to the next and previous post.
+        SECTION .pageprev - A container for the previous post link.
+        SECTION .pagenext - A container for the next post link.
+    FOOTER - A container for various details.
+        P - Contains site & author details.
+        ADDRESS - Contains email details (if specified).
+        ASIDE - Contains last updated & RSS link. */
+
+html {
+    scrollbar-color: var(--main-fg-color) #00000000;
+}
+
+nav {
+    background-color: var(--main-bg-color);
 }
 
 main {

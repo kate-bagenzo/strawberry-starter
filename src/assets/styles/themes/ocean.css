@@ -12,6 +12,7 @@
 
 html {
     font-family: 'Roboto', 'sans-serif';
+    scrollbar-color: var(--main-bg-color) #00000000;
 }
 
 body {
@@ -86,4 +87,8 @@ pre:has(code) {
 #pagination {
     border-radius: 0;
     border-bottom: 1px solid var(--main-bg-color);
+}
+
+.lastupdate::after {
+    content: " ⚙ ";
 }

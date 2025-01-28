@@ -41,7 +41,7 @@
         // ocean: a dark blue theme.
         // morning: a crisp orange theme.
         // bombo: a deep forest green theme with gradients. (designed by fotocopiadora!)
-        // plain: a minimal theme - very basic, a template for you to make your own theme
+        // plain: a minimal theme - very basic - a commentated template for you to make your own theme
     // feel free to look inside the theme files and customize them - it's not hard to edit simple things, like the colors!
-    "siteStyle": "morning"
+    "siteStyle": "strawberry"
 }

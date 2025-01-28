@@ -89,3 +89,7 @@ ul li ul li::marker,
 ol li ul li::marker {
     color: var(--main-fg-color);
 }
+
+.lastupdate::after {
+    content: " ❇ "
+}

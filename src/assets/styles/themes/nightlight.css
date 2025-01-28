@@ -12,6 +12,7 @@
 
 html {
     font-family: 'Noto Serif', 'sans-serif';
+    scrollbar-color: var(--secondary-bg-color) #00000000;
 }
 
 body {

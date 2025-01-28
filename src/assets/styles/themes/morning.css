@@ -33,6 +33,7 @@ nav {
 
 nav ol {
     gap: 0.35rem;
+    row-gap: 1.5rem;
 }
 
 nav ol li a {

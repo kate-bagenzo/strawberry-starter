@@ -13,6 +13,7 @@
 
 html {
     font-family: 'Noto Serif', 'serif';
+    scrollbar-color: var(--main-bg-color) #00000000;
 }
 
 body {
