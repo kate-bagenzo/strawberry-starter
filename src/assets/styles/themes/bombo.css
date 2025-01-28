@@ -55,6 +55,7 @@ main {
     border-top-left-radius: 0.75rem;
     border-top-right-radius: 0.75rem;
     padding-top: 0;
+    min-height: 500px;
 }
 
 main, footer {

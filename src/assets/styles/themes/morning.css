@@ -5,6 +5,7 @@
 :root {
     --main-bg-color: #FFB882;
     --secondary-bg-color: #E16036;
+    --tertiary-bg-color: #a34222;
     --main-fg-color: #502F26;
     --main-highlight-color: #F5E4E0;
 }
@@ -45,14 +46,7 @@ nav ol li a {
     z-index: 0;
 }
 
-footer {
-    background-color: var(--secondary-bg-color);
-    color: var(--main-fg-color);
-}
-
-main,
-footer,
-#pagination {
+main {
     border: 1px solid var(--main-bg-color);
 }
 
@@ -93,11 +87,43 @@ pre:has(code) {
     color: var(--main-highlight-color);
     border-bottom: none;
     padding: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+    gap: 1rem;
+}
+
+main:has(+ #pagination) {
+    border-radius: 0.5rem;
+}
+
+.pagectrl {
+    padding: 0.5rem;
+    background-color: var(--secondary-bg-color);
+    color: var(--main-highlight-color);
+    border-radius: 0.5rem;
+    flex-grow: 1;
+}
+
+.pagenext {
+    margin-left: 0;
+    text-align: right;
 }
 
 #pagination a,
 footer a {
     color: var(--main-highlight-color);
+}
+
+footer {
+    border-radius: 0.5rem;
+    background-color: var(--tertiary-bg-color);
+    color: var(--main-highlight-color);
+}
+
+main + footer {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 .lastupdate::after {
