@@ -86,7 +86,13 @@ pre:has(code) {
 
 #pagination {
     border-radius: 0;
-    border-bottom: 1px solid var(--main-bg-color);
+    margin-bottom: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+#pagination + footer {
+    border-radius: 1rem;
 }
 
 .lastupdate::after {
