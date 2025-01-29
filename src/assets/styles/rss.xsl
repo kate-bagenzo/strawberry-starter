@@ -29,8 +29,43 @@ exclude-result-prefixes="atom"
                 <a>
                     <xsl:attribute name="href">
                     <xsl:value-of select="atom:feed/atom:link/@href"/>
-                    </xsl:attribute>Add this URL to an RSS reader to subscribe!
+                    </xsl:attribute><strong>Add this URL to an RSS reader to subscribe!</strong>
                 </a>
+        <style>
+                * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 18px;
+            scrollbar-gutter: stable;
+            font-family: 'sans-serif';
+            background-color: #b3b3b3;
+            font-family: 'monospace';
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+
+        header,
+        section {
+            width: 50%;
+            border: 1px solid black;
+            padding: 1rem;
+            background-color: #f7f7f7;
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+        </style>
         </header>
         <xsl:for-each select="/atom:feed/atom:entry">
             <section>

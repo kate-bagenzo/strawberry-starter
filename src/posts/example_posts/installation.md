@@ -113,9 +113,10 @@ To get your blog ready for uploading somewhere, go to the command line and type 
     - Don't edit `.env` itself! It's just a template of what your `.env.local` should look like, and should be kept that way to ensure your API key stays safe.
 5. **(Optional) Set a subdirectory**
     - If you have an empty site and want your blog to live at `example.neocities.org`, then you don't need to do anything else.
-    - HOWEVER, if you already have a homepage at the base of your Neocities, you can instead upload to a subdirectory like `example.neocities.org/blog`
-        - To do this, change the `siteSubDir` in `config.jsonc` to something else, like `/blog/`.
-    - **⚠️ Warning**: BE SURE to set this if you already have a homepage! Uploading to Neocities will OVERWRITE content, so be careful. If you set a subdirectory, you should be OK, but if you're really worried, make a backup of your site before running `npm run upload`.
+    - HOWEVER, if you already have a homepage at the base of your Neocities, you can instead upload to a subdirectory like `example.neocities.org/blog/`
+        - To do this, change the `siteSubDir` in `config.jsonc` to something else, e.g. `/blog/`.
+    - **⚠️ Warning**: BE SURE to set this if you already have a homepage! Uploading to Neocities will OVERWRITE content, so if you already have, for example, an `index.html` page, `npm run upload` will replace it with Strawberry Starter's index. Setting a subdirectory avoids this, but just in case, you might want to make a backup of your site before running `npm run upload`.
+        - You can easily back up your Neocities site by navigating to the [dashboard](https://neocities.org/dashboard) and clicking "Download entire site".
 
 If you followed the above steps correctly, you should be able to use `npm run upload`! That command also builds your site, so if you're uploading to neocities this way, you don't need to run `npm run build`.  
 
