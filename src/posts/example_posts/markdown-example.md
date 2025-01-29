@@ -23,7 +23,7 @@ Just add two spaces
 At the end of your sentence  
 
 ## Strong Text and Emphasis
-You can use **double asterisks** for strong text, and *single asteriks* for emphasis.  
+You can use **double asterisks** for strong text, and *single asterisks* for emphasis.  
 Those will usually show up as bold and italics, but themes/custom styling can override that!
 ***You can also use triple asterisks for both of them***.
 

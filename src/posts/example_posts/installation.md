@@ -82,7 +82,7 @@ The date is actually optional - if it's not present, the file creation date will
 Create a new post now - give it a title and today's date. When you save the file, you should see it appear on the dev server.
 
 ## The index and navbar
-There are some other pages on your site besides blog posts, though! You'll notice there's a navigation bar at the top of your blog with three links: `home`, `all_posts`, and `about`. These pages are all Markdown files, so editing them is similar to editing blogposts - they're just located in different places:
+There are some other pages on your site besides blog posts, though! You'll notice there's a navigation bar at the top of your blog with three links: `home`, `all_posts`, and `about`. These pages are all Markdown files, so editing them is similar to editing blog posts - they're just located in different places:
 - The home page (index) is located at `src/index.md`.
 - `all_posts.md` and `about.md` are found at `src/info`.
     - Any .md file written in the `info` folder will also appear in the navbar!
@@ -91,7 +91,7 @@ There are some other pages on your site besides blog posts, though! You'll notic
             - In fact, if you've noticed, this very installation guide has such a tag!
 If the difference between .md files in `posts` and `info` is confusing to you, don't worry. The main difference is that only `posts` will appear in "Latest posts" or "All posts", while `info`s will only appear in the navbar.
 
-## Favicon and Opengraph
+## Favicon and Preview
 There are two last things you want to customize:
 - The favicon, which appears in the browser tab and bookmarks.
     - Found at `src/favicon.ico`
