@@ -20,3 +20,5 @@ I recommend a few starting places:
 Delete the `node_modules` folder and then zip up the entire folder and store it someplace.  
 When you deploy your site from a backup, simply run `npm install` again first.
 
+## I have a question not answered here.
+Try making a comment on the itch page, opening an issue on the Github (if you know how to do that) or, alternatively, feel free to reach out to me on social media or email. Or if you just want to show me a cool blog you made 😊
