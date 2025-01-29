@@ -15,7 +15,7 @@ layout: head.html
             <h1>{{ title }}</h1>
             {% assign postCheck = collections.posts | getCollectionItem %}
             {% if postCheck %}
-            <time>{{ i.data.date | dateDMY }}</time>
+            <time>{{ page.date | dateDMY }}</time>
             {% endif %}
         </header>
         {{ content }}

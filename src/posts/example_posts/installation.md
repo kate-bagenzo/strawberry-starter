@@ -5,11 +5,11 @@ tags: navbar
 ---
 Here's how to get started with your new blog:
 1. **Download & Unzip Strawberry Starter**.
-    - You can grab it from itch.io or github.
+    - You can grab it from [itch.io](https://bagenzo.itch.io/strawberry-starter) or [Github](https://github.com/kate-bagenzo/strawberry-starter).
     - Unzip it wherever - you can move the folder around later without issues, so don't worry.
 2. **Download & Install Node**.
     - Node is a javascript runtime that lets you create things for the web.
-    - Grab it from the [node website](https://nodejs.org/en).
+    - Grab it from the [Node website](https://nodejs.org/en).
 3. **Open a Command Line in Strawberry Starter's folder**
     - Never used one? It's a program that lets you type computer commands.
         - **🪟 Windows**: Powershell is built-in, and what I recommend you use. If you're familiar with the "Command Prompt", that'll *probably* work, but it's not recommended for a variety of reasons.
@@ -36,9 +36,9 @@ This is a preview of what your blog looks like, and it'll update automatically a
 Go to the `src` folder. This is where your blog's files live.  
 There's a lot of stuff here, but you don't need to worry about most it! For now, let's go to `_data` and open the file named `config.jsonc`.
 ### A brief aside about JSON
-If you've never seen a `.json` or `.jsonc` file before - it's not complicated! It's just a way to store text so that it can be easily read by programs. The format is always the same: a bunch of `keys` and `values`, paired like so: `"key": "value",`. The entire list is contained within {curly braces}.
+If you've never seen a `.json` or `.jsonc` file before - don't worry, it's not complicated! It's just a way to store text so that it can be easily read by programs. The format of JSON is pretty simple: a bunch of `keys` and `values`, paired like so: `"key": "value",`. These keys and values are contained within two {curly braces}, which you'll see at the start and end of the file.
 
-Note the quotation marks and the comma! All of the key-value pairs (except for the last) must have a comma. The keys and values must also be enclosed with quotation marks. Be sure not to accidentally change that while editing your config file, or your blog will stop working!
+Note the quotation marks and the comma! **All of the key-value pairs (except for the last) must have a comma**. The keys and values must also be enclosed with quotation marks. Be sure not to accidentally change that while editing your config file, or your blog will stop working!
 
 `config.jsonc` contains data that appears in a few places in your blog. Take the time now to replace the defaults, being careful not to disturb any quotation marks or commas or curly braces:
 - `siteName`

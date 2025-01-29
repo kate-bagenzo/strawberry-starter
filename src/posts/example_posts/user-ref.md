@@ -46,7 +46,8 @@ This page explains how to do various things. You can find more step-by-step inst
 ## Commands
 - `npm install`
     - This installs dependencies that your blog needs to function.
-    - You only need to run this once.
+    - You only need to run this once, to create the `node_modules` folder.
+        - If that folder is deleted (e.g. you got rid of it to back up your blog somewhere) you'll need to run this command again to build or use the dev server.
 - `npm run dev`
     - This command starts a development server at [localhost:1234](localhost:1234).
     - It live updates with any changes you make, so it's good to run this while writing to see a preview of your blog.
@@ -54,7 +55,7 @@ This page explains how to do various things. You can find more step-by-step inst
     - This command outputs your blog's files to the `_site/` folder.
 - `npm run upload`
     - This command will build your site (as if you had typed `npm run build`), and then upload your site directly to Neocities.
-    - However, it won't work out of the box. Check the [installation guide](/posts/installation) and the `.env` file for more info.
+    - However, it won't work out of the box. Check the [installation guide](/posts/example_posts/installation) and the `.env` file for more info.
 
 ### Detailed Folder Layout Reference
 Here's an overview of the folders and files in Strawberry Starter. You can ignore most of these and have a perfectly functional blog, but if you're curious and/or brave:

@@ -3,7 +3,7 @@ A simply-sweet blog template for [11ty](https://www.11ty.dev/)!
 
 For more information, including a step-by-step installation guide with detialed instructions, [check out the homepage](https://strawberrystarter.neocities.org/).  
 **Don't be scared by this README! It's designed for those already familiar with web technologies like npm and Node.**  
-I promise the [installation guide on the homepage](https://strawberrystarter.neocities.org/posts/installation/) is simpler. 😊
+I promise the [installation guide on the homepage](https://strawberrystarter.neocities.org/posts/example_posts/installation/) is simpler. 😊
 
 ## Install and Setup
 `npm i`, then edit `_data/config.jsonc` and follow the instructions.  
