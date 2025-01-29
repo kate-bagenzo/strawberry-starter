@@ -1,7 +1,7 @@
 {
   "name": "strawberry-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "a simply sweet blog template",
   "main": "index.js",
   "scripts": {
     "postinstall": "postinstall",
@@ -15,8 +15,8 @@
   "author": "Kate Bagenzo",
   "license": "MIT",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.1-alpha.3",
-    "@11ty/eleventy-plugin-rss": "^2.0.3",
+    "@11ty/eleventy": "3.0.1-alpha.3",
+    "@11ty/eleventy-plugin-rss": "2.0.3",
     "dotenv": "^16.4.7",
     "dotenv-flow": "^4.1.0",
     "form-data": "^4.0.1",
