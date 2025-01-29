@@ -49,6 +49,11 @@ export default function (eleventyConfig) {
   return converted;
   });
 
+  eleventyConfig.addFilter("getLatestFive", function(value) {
+    const converted = value.splice(0, 5);
+    return converted;
+    });
+
   return {
     dir: {
       input: "src",

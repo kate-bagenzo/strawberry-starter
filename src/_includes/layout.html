@@ -22,7 +22,8 @@ layout: head.html
         {% if page.url == '/'  and collections.posts%}
             <h2>Latest Posts:</h2>
             <ol id="latest_posts">
-            {% for i in collections.posts reversed %}
+                {% assign latest_posts = collections.posts | getLatestFive | reverse %}
+            {% for i in latest_posts %}
                 <li>
                     <a href="{{ i.url }}">{{ i.data.date | dateDMY }} - {{ i.data.title }}</a>
                 </li>
