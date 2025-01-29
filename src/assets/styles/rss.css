@@ -6,6 +6,8 @@ html {
     font-size: 18px;
     scrollbar-gutter: stable;
     font-family: 'sans-serif';
+    background-color: #b3b3b3;
+    font-family: 'monospace';
 }
 
 body {
@@ -15,6 +17,7 @@ body {
     justify-content: flex-start;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    gap: 1rem;
 }
 
 header,
@@ -22,10 +25,10 @@ section {
     width: 50%;
     border: 1px solid black;
     padding: 1rem;
+    background-color: #f7f7f7;
 }
 
 section {
-    border-top: none;
 }
 
 h3 {
