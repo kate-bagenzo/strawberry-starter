@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'Noto Serif';
-    src: url('/assets/fonts/notoserif.ttf');
+    src: url('../../fonts/notoserif.ttf');
 }
 @font-face {
     font-family: 'Roboto';
-    src: url('/assets/fonts/roboto.ttf');
+    src: url('../../fonts/roboto.ttf');
 }
 
 :root {

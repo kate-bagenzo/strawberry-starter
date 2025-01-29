@@ -1,4 +1,5 @@
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import fs from 'fs';
 import { jsonc } from "jsonc";
 
@@ -13,6 +14,7 @@ export default function (eleventyConfig) {
 		return jsonc.parse(contents);
 	});
 
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPlugin(feedPlugin, {
 		type: "atom",
 		outputPath: "/feed.xml",
@@ -53,6 +55,7 @@ export default function (eleventyConfig) {
       includes: "_includes",
       data: "_data",
       output: "_site"
-    }
+    },
+    pathPrefix: config.siteSubDir
   };
 };

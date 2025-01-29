@@ -9,7 +9,7 @@
     "start": "npm run dev",
     "dev": "npx @11ty/eleventy --serve --port 1234",
     "build": "npx @11ty/eleventy",
-    "upload": "node _functions/upload-neo.js"
+    "upload": "npm run build && node _functions/upload-neo.js"
   },
   "keywords": [],
   "author": "Kate Bagenzo",

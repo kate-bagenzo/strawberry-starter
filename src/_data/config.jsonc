@@ -36,12 +36,20 @@
     // themes are located in src/assets/styles/themes
         // strawberry: the default theme
         // contrast:   a sleek, high contrast black & white theme.
-        // bark:       a green & brown autumnal theme.
-        // nightlight: a purple polka dot theme.
-        // ocean:      a dark blue theme.
-        // morning:    a crisp orange theme.
+        // bark:       an old-school, green & brown autumnal theme.
+        // nightlight: a flat, purple polka dot theme.
+        // ocean:      a dark blue theme with rounded corners.
+        // morning:    a bright orange theme with a fun navigation bar style.
         // bombo:      a deep forest green theme with gradients. (designed by fotocopiadora!)
         // plain:      a very barebones, minimal theme - more of a template for you to create your own theme
     // feel free to look inside the theme files and customize them - it's not hard to edit simple things, like the colors!
-    "siteStyle": "bombo"
+    "siteStyle": "bombo",
+
+    // (optional) upload your site to a subdirectory
+    // e.g. set this to "/blog/" if you want your blog to be at "example.neocities.org/blog/" instead of "example.neocities.org"
+    // (works for subdirectories on any hosting provider, not just neocities)
+    // !!!
+    // IF YOU'RE USING NEOCITIES UPLOAD AND YOUR SITE ALREADY HAS CONTENT IN IT - like a homepage - BE SURE TO SET THIS!
+    // UPLOADING TO NEOCITIES WILL OVERWRITE CONTENT!
+    "siteSubDir": "/"
 }

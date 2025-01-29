@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'Roboto';
-    src: url('/assets/fonts/roboto.ttf');
+    src: url('../../fonts/roboto.ttf');
 }
+
 :root {
-    /* tweak these hex codes to change the colors! */
     --main-bg-color: #000;
     --main-fg-color: #fff;
 }
@@ -44,7 +44,7 @@ main {
     border-bottom: none;
 }
 
-img[src='/assets/images/berrysprite.png'] {
+img[src*='berrysprite.png'] {
     float: right;
     padding-right: 1rem;
     filter: grayscale(100%);

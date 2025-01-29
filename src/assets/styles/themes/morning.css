@@ -1,7 +1,8 @@
 @font-face {
     font-family: 'Roboto';
-    src: url('/assets/fonts/roboto.ttf');
+    src: url('../../fonts/roboto.ttf');
 }
+
 :root {
     --main-bg-color: #FFB882;
     --secondary-bg-color: #E16036;

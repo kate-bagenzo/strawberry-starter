@@ -35,6 +35,13 @@ This page explains how to do various things. You can find more step-by-step inst
     - Your email. Appears on the footer. You can leave this blank if you prefer.
 - `siteStyle`
     - The theme used by your blog. Themes are in located `src/assets/styles/themes/`. You can use (or edit) one of the premade themes, or create your own if you know CSS.
+- `siteSubDir`
+    - Set this only if you want to upload your blog to a subdirectory.
+    - e.g. - set this to `/blog/` if your site will be at `example.org/blog/` instead of `example.org`.
+    - This setting will change all the links on your blog to work with your new subdirectory.
+        - e.g. When linking images in posts, you can just do `/assets/images/example.jpg`, instead of `/blog/assets/images/bowl_of_berries.jpg`
+    - **⚠️ Warning**: If you're uploading to Neocities and already have a homepage with content in it, BE SURE TO SET THIS!
+        - Uploading to Neocities will OVERWRITE content like your `index.html` !
 
 ## Commands
 - `npm install`

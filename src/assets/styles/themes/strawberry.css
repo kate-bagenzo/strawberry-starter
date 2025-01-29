@@ -1,7 +1,8 @@
 @font-face {
     font-family: 'Roboto';
-    src: url('/assets/fonts/roboto.ttf');
+    src: url('../../fonts/roboto.ttf');
 }
+
 :root {
     --main-bg-color: #100a16;
     --main-fg-color: #deeed6;
@@ -49,7 +50,7 @@ footer, main, #pagination {
     border-bottom: none;
 }
 
-img[src='/assets/images/berrysprite.png'] {
+img[src*='berrysprite.png'] {
     float: right;
     padding-right: 1rem;
 }

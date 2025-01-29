@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Noto Serif';
-    src: url('/assets/fonts/notoserif.ttf');
+    src: url('../../fonts/notoserif.ttf');
 }
 
 :root {
@@ -88,6 +88,6 @@ pre:has(code) {
     content: " ◉ ";
 }
 
-img[src='/assets/images/berrysprite.png'] {
+img[src*='berrysprite.png'] {
     filter: sepia(100%);
 }

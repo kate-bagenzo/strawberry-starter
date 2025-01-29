@@ -6,6 +6,7 @@ import path from 'path';
 import url from 'url';
 import qs from 'querystring';
 import FormData from 'form-data';
+import { jsonc } from 'jsonc';
 
 dotenvFlow.config();
 
@@ -100,8 +101,10 @@ NeoCities.prototype.upload = function(files, callback) {
 // let's rock!
 if (process.env.NEOCITIES_API) {
   const api = new NeoCities(process.env.NEOCITIES_API);
-  const subDir = process.env.NEOCITIES_SUBDIRECTORY;
-  
+  const config = jsonc.parse(fs.readFileSync('src/_data/config.jsonc', 'utf8'));
+  let subDir;
+  config.siteSubDir.slice(-1) == '/' ? subDir = config.siteSubDir.slice(0, -1) : subDir = config.siteSubDir;
+
   const toUpload = [];
   fs.readdir('_site', {recursive: true, withFileTypes: true}, (err, files) => {
       if (err) {
@@ -125,7 +128,7 @@ if (process.env.NEOCITIES_API) {
         console.log(`Something went wrong uploading: ${resp}`);
       }
   })
-  
+
 } else if (process.env.NEOCITIES_API == "ABCD1234") {
   throw new Error(`ERROR: Did you set your API key correctly? Check the user guide.`);
 } else {

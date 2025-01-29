@@ -56,6 +56,13 @@ Note the quotation marks and the comma! All of the key-value pairs (except for t
     -Your email. Appears on the footer. You can leave this blank if you prefer.
 - `siteStyle`
     - The theme used by your blog. Themes are located in `src/assets/styles/themes/`. You can use (or edit) one of the premade themes, or create your own if you know CSS.
+- `siteSubDir`
+    - Set this only if you want to upload your blog to a subdirectory.
+    - e.g. - set this to `/blog/` if your site will be at `example.org/blog/` instead of `example.org`.
+    - This setting will automatically change all the links on your blog to work with your new subdirectory.
+        - e.g. When linking images in posts, you can just do `/assets/images/example.jpg`, instead of `/blog/assets/images/bowl_of_berries.jpg`
+    - **⚠️ Warning**: If you're uploading to Neocities and already have a homepage with content in it, BE SURE TO SET THIS!
+        - Uploading to Neocities will OVERWRITE content like your `index.html` !
 
 ### An aside about text editors
 You can use whatever text editor you want to edit! I like VS Code or Notepad++, but you can even use Notepad if you want. The only important thing is that it shouldn't be a *word processor*, like Microsoft Word or Libreoffice Writer.
@@ -101,8 +108,12 @@ To get your blog ready for uploading somewhere, go to the command line and type 
     - Keep this safe! Don't share it with anyone, or they can edit your site.
 4. **Open the `.env` file in the base of your blog and follow its instructions.**
     - Don't edit `.env` itself! It's just a template of what your `.env.local` should look like, and should be kept that way to ensure your API key stays safe.
+5. **(Optional) Set a subdirectory**
+    - If you have an empty site and want your blog to live at `example.neocities.org`, then you don't need to do anything else.
+    - HOWEVER, if you already have a homepage at the base of your Neocities, you can instead upload to a subdirectory like `example.neocities.org/blog`
+        - To do this, change the `siteSubDir` in `config.jsonc` to something else, like `/blog/`.
+    - **⚠️ Warning**: BE SURE to set this if you already have a homepage! Uploading to Neocities will OVERWRITE content, so be careful. If you set a subdirectory, you should be OK, but if you're really worried, make a backup of your site before running `npm run upload`.
 
 If you followed the above steps correctly, you should be able to use `npm run upload`! That command also builds your site, so if you're uploading to neocities this way, you don't need to run `npm run build`.  
-By default, this pushes directly to your site's homepage. If you're just using your neocities for your blog, that's fine, but if you have other pages on your site, be sure to set the `NEOCITIES_SUBDIRECTORY` field in `.env.local` to something else!
 
 You should now have everything you need for a successful blog. Go forth - delete these starter posts, rewrite the about page, the sky is the limit! Have fun blogging!

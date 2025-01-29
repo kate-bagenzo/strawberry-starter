@@ -120,7 +120,7 @@ iframe {
     max-width: 100%;
 }
 
-img[src='/assets/images/berrysprite.png'] {
+img[src*='berrysprite.png'] {
     float: right;
     padding-right: 1rem;
 }
