@@ -85,10 +85,11 @@ Create a new post now - give it a title and today's date. When you save the file
 There are some other pages on your site besides blog posts, though! You'll notice there's a navigation bar at the top of your blog with three links: `home`, `all_posts`, and `about`. These pages are all Markdown files, so editing them is similar to editing blogposts - they're just located in different places:
 - The home page (index) is located at `src/index.md`.
 - `all_posts.md` and `about.md` are found at `src/info`.
-    - Any .md file made in this folder will also appear in the navbar!
-        - It won't count as a "blog post" though, so it won't appear in "Latest posts" or update the RSS Feed.
-        - Luckily, you can add a blog post to the navbar by adding `tags: navbar` to its front matter.
+    - Any .md file written in the `info` folder will also appear in the navbar!
+        - It won't count as a "blog post" though, so it won't appear in "Latest posts", or update the RSS Feed.
+        - If you want, you can instead add a blog post to the navbar by adding `tags: navbar` to its front matter.
             - In fact, if you've noticed, this very installation guide has such a tag!
+If the difference between .md files in `posts` and `info` is confusing to you, don't worry. The main difference is that only `posts` will appear in "Latest posts" or "All posts", while `info`s will only appear in the navbar.
 
 ## Favicon and Opengraph
 There are two last things you want to customize:
@@ -118,4 +119,7 @@ To get your blog ready for uploading somewhere, go to the command line and type 
 
 If you followed the above steps correctly, you should be able to use `npm run upload`! That command also builds your site, so if you're uploading to neocities this way, you don't need to run `npm run build`.  
 
-You should now have everything you need for a successful blog. Go forth - delete these starter posts, rewrite the about page, the sky is the limit! Have fun blogging!
+## All done!
+You should now have everything you need for a successful blog!  
+Go forth and write an introduction post, edit the index and about pages, and upload your site!  
+Oh - and don't forget to delete the `example_posts` folder in `posts`!
