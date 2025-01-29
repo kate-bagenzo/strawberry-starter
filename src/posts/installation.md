@@ -1,6 +1,7 @@
 ---
 title: Installation Guide
 date: 2025-01-01
+tags: navbar
 ---
 Here's how to get started with your new blog:
 1. **Download & Unzip Strawberry Starter**.
@@ -83,10 +84,11 @@ Create a new post now - give it a title and today's date. When you save the file
 ## The index and navbar
 There are some other pages on your site besides blog posts, though! You'll notice there's a navigation bar at the top of your blog with three links: `home`, `all_posts`, and `about`. These pages are all Markdown files, so editing them is similar to editing blogposts - they're just located in different places:
 - The home page (index) is located at `src/index.md`.
-- `all_posts.md` and `about.md` are found at `src/navbar`.
+- `all_posts.md` and `about.md` are found at `src/info`.
     - Any .md file made in this folder will also appear in the navbar!
-        - It won't count as a "post" though, so it won't appear in "Latest posts" or RSS.
+        - It won't count as a "blog post" though, so it won't appear in "Latest posts" or update the RSS Feed.
         - Luckily, you can add a blog post to the navbar by adding `tags: navbar` to its front matter.
+            - In fact, if you've noticed, this very installation guide has such a tag!
 
 ## Favicon and Opengraph
 There are two last things you want to customize:

@@ -73,7 +73,7 @@ Here's an overview of the folders and files in Strawberry Starter. You can ignor
         - These files also use Liquid, a templating language.
     - `assets/`
         - An assorted folder for storing things like images or scripts or styles. Anything placed in this folder will automatically be copied over to `_site/` when you run the `build` or `upload` command.
-    - `navbar/`
+    - `info/`
         - Contains pages that will appear on the navbar at the top of your blog. By default, you have two: `all_posts` and `about`.
         - If you want to add a new navbar section to your blog, add a .md file here.
     - `posts/`
