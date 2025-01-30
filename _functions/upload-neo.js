@@ -119,15 +119,16 @@ if (process.env.NEOCITIES_API) {
               });
           }
       });
+      api.upload(toUpload, (resp) => {
+        if (resp.result == 'success') {
+          console.log(`Your site was uploaded! Have a 🍓 day.`);
+        } else {
+          console.log(`Something went wrong uploading: ${Object.values(resp)}`);
+        }
+      })
   });
   
-  api.upload(toUpload, (resp) => {
-      if (resp.result == 'success') {
-        console.log(`Your site was uploaded! Have a 🍓 day.`);
-      } else {
-        console.log(`Something went wrong uploading: ${resp}`);
-      }
-  })
+
 
 } else if (process.env.NEOCITIES_API == "ABCD1234") {
   throw new Error(`ERROR: Did you set your API key correctly? Check the user guide.`);
