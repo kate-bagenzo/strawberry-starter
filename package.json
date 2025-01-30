@@ -7,8 +7,8 @@
     "postinstall": "postinstall",
     "prepare": "postinstall",
     "start": "npm run dev",
-    "dev": "npx @11ty/eleventy --serve --port 1234",
-    "build": "npx @11ty/eleventy",
+    "dev": "rimraf _site/ && npx @11ty/eleventy --serve --port 1234",
+    "build": "rimraf _site/ && npx @11ty/eleventy",
     "upload": "npm run build && node _functions/upload-neo.js"
   },
   "keywords": [],
@@ -21,10 +21,13 @@
     "dotenv-flow": "^4.1.0",
     "form-data": "^4.0.1",
     "jsonc": "^2.0.0",
-    "postinstall": "^0.7.5"
+    "postinstall": "^0.11.0"
   },
   "postinstall": {
     "_functions/EleventyFiles.js": "copy node_modules/@11ty/eleventy/src/EleventyFiles.js"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "rimraf": "^6.0.1"
+  }
 }

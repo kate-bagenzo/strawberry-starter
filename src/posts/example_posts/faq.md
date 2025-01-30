@@ -5,7 +5,7 @@ date: 2025-01-04
 Some answers for miscellaneous issues or concerns:
 
 ## The dev server is acting strangely!
-You're probably on Windows. The 11ty dev server has some bugs on Windows - Strawberry Starter comes with a patch for a big one (thanks [Sean](https://seans.site/)!), but things can still look weird sometimes. Regardless of operating system - if you notice anything odd, my advice is to delete `_site`, stop the dev server, and then start it again.
+Are you on Windows? The 11ty dev server has some bugs on Windows - Strawberry Starter comes with a patch for a big one (thanks [Sean](https://seans.site/)!), but things can still look weird sometimes. Regardless of operating system - if you notice anything odd, my advice is to stop the dev server, and then start it again. If that doesn't fix anything, try manually deleting `_site`.
 
 ## This is cool, but I want to tinker with it...
 I recommend a few starting places:
@@ -17,8 +17,8 @@ I recommend a few starting places:
     - They mostly scratch the surface, but it's good to start here and then search what you want to do. 11ty is very basic out of the box, but you can extend it a lot, usually by editing `eleventy.config.js`.
 
 ## How can I back up my blog?
-Delete the `node_modules` folder and then zip up the entire folder and store it someplace.  
-When you deploy your site from a backup, simply run `npm install` again first.
+Delete the `node_modules` folder and store the folder somewhere.  
+When you deploy your site from that backup, run `npm install` again, and the `node_modules` folder will return.
 
 ## I have a question not answered here.
 Try making a comment on the itch page, opening an issue on the Github (if you know how to do that) or, alternatively, feel free to reach out to me on social media or email. Or if you just want to show me a cool blog you made 😊
