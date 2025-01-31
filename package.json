@@ -4,7 +4,7 @@
   "description": "a simply sweet blog template",
   "main": "index.js",
   "scripts": {
-    "postinstall": "postinstall",
+    "postinstall": "node _functions/fix-win.js",
     "prepare": "postinstall",
     "start": "npm run dev",
     "dev": "rimraf _site/ && npx @11ty/eleventy --serve --port 1234",
@@ -23,9 +23,6 @@
     "jsonc": "^2.0.0",
     "postinstall": "^0.11.0",
     "rimraf": "^6.0.1"
-  },
-  "postinstall": {
-    "_functions/EleventyFiles.js": "copy node_modules/@11ty/eleventy/src/EleventyFiles.js"
   },
   "type": "module"
 }
