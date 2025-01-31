@@ -43,10 +43,12 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("dateDMY", function(value) {
-  const converted = new Intl.DateTimeFormat('en-GB', {
-      dateStyle: "short",
-    }).format(value);
-  return converted;
+  const temp = value.toISOString();
+  const day = temp.slice(8,10);
+  const month = temp.slice(5,7);
+  const year = temp.slice(0,4);
+  const newDate = `${day}/${month}/${year}`
+  return newDate;
   });
 
   eleventyConfig.addFilter("getLatestFive", function(value) {
