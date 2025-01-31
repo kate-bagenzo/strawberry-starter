@@ -119,14 +119,30 @@ if (process.env.NEOCITIES_API) {
               });
           }
       });
-      api.upload(toUpload, (resp) => {
-        if (resp.result == 'success') {
-          console.log(`Your site was uploaded! Have a 🍓 day.`);
-        } else {
-          console.log(`Something went wrong uploading: ${Object.values(resp)}`);
-        }
-      })
-  });
+
+      const uploadBatches = [];
+      while (toUpload.length) {
+        uploadBatches.push(toUpload.splice(0,100));
+      }
+
+      if (uploadBatches.length > 1) {
+        console.log(`You've got a big site (>100 files), uploading in ${uploadBatches.length} batches...`)
+      } else {
+        console.log("Uploading site...")
+      }
+
+      uploadBatches.forEach( (batch) => {
+        setTimeout(() => {
+          api.upload(batch, (resp) => {
+            if (resp.result == 'success') {
+              console.log(`Upload complete! Have a 🍓 day.`);
+            } else {
+              console.log(`Something went wrong uploading: ${Object.values(resp)}`);
+            }
+          })
+        }, 1000);
+      });
+    });
   
 
 
