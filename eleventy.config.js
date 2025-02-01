@@ -52,7 +52,7 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("getLatestFive", function(value) {
-    const converted = value.splice(0, 5);
+    const converted = value.slice(0, 5);
     return converted;
     });
 
