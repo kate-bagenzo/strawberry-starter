@@ -36,19 +36,26 @@ export default function (eleventyConfig) {
 	});
 
   eleventyConfig.addGlobalData('lastUpdate', () => {
-    let now = new Date();
-    return new Intl.DateTimeFormat(
-      'en', { dateStyle: 'medium' }
-    ).format(now);
+    let now = new Date().toUTCString();
+    const day = now.slice(5,7);
+    const month = now.slice(8,11);
+    const year = now.slice(12, 16);
+    const DMY = `${day} ${month} ${year}`;
+    const MDY = `${month} ${day}, ${year}`;
+    const YMD = `${year} ${month} ${day}`;
+    return MDY;
   });
 
-  eleventyConfig.addFilter("dateDMY", function(value) {
-  const temp = value.toISOString();
-  const day = temp.slice(8,10);
-  const month = temp.slice(5,7);
-  const year = temp.slice(0,4);
-  const newDate = `${day}/${month}/${year}`
-  return newDate;
+  eleventyConfig.addFilter("dateFormat", function(value) {
+    const temp = value.toISOString();
+    const day = temp.slice(8,10);
+    const month = temp.slice(5,7);
+    const year = temp.slice(0,4);
+    const DMY = `${day}/${month}/${year}`;
+    const MDY = `${month}/${day}/${year}`;
+    const YMD = `${year}/${month}/${day}`;
+    const YDM = `${year}/${day}/${month}`;
+    return DMY;
   });
 
   eleventyConfig.addFilter("getLatestFive", function(value) {

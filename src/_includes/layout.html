@@ -15,7 +15,7 @@ layout: head.html
             <h1>{{ title }}</h1>
             {% assign postCheck = collections.posts | getCollectionItem %}
             {% if postCheck %}
-            <time>{{ page.date | dateDMY }}</time>
+            <time>{{ page.date | dateFormat }}</time>
             {% endif %}
         </header>
         {{ content }}
@@ -25,7 +25,7 @@ layout: head.html
                 {% assign latest_posts = collections.posts | getLatestFive | reverse %}
             {% for i in latest_posts %}
                 <li>
-                    <a href="{{ i.url }}">{{ i.data.date | dateDMY }} - {{ i.data.title }}</a>
+                    <a href="{{ i.url }}">{{ i.date | dateFormat }} - {{ i.data.title }}</a>
                 </li>
             {% endfor %}
             </ol>
@@ -38,14 +38,14 @@ layout: head.html
         {% if previousPost %}
         <section class="pagectrl pageprev">
             <p>Previous:</p>
-            <a href="{{ previousPost.url }}"><p>{{ previousPost.data.title }}</p><time>{{ previousPost.date | dateDMY }}</time></a>
+            <a href="{{ previousPost.url }}"><p>{{ previousPost.data.title }}</p><time>{{ previousPost.date | dateFormat }}</time></a>
         </section>
         {% endif %}
 
         {% if nextPost %}
         <section class="pagectrl pagenext">
             <p>Next:</p>
-            <a href="{{ nextPost.url }}"><p>{{ nextPost.data.title }}</p><time>{{ nextPost.date | dateDMY }}</time></a>
+            <a href="{{ nextPost.url }}"><p>{{ nextPost.data.title }}</p><time>{{ nextPost.date | dateFormat }}</time></a>
         </section>
         {% endif %}
     </nav>
