@@ -20,7 +20,7 @@ Here's how to get started with your new blog:
     - You'll see some output, and probably some warnings and notifications. Unless you see a big ERROR, you should be okay.
     - > **🪟 On Windows**: You might get a Powershell error here! If it says you don't have permission to run scripts, then copy and paste this command:
          - > `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted`
-         - > You can right click -> paste this, or paste it with CTRL+SHIFT+V. Command lines are finnicky and won't let you copy or paste with the usual shortcuts!
+         - > You can right click -> paste this, or paste it with CTRL+SHIFT+V. Beware: command lines are finnicky and won't let you copy or paste with the usual shortcuts!
          - > Then, try `npm install` again.
          - > If that doesn't work, try again, but running Powershell as admin.
 

@@ -35,6 +35,7 @@ export default function (eleventyConfig) {
 		}
 	});
 
+  // LAST UPDATE FORMAT
   eleventyConfig.addGlobalData('lastUpdate', () => {
     let now = new Date().toUTCString();
     const day = now.slice(5,7);
@@ -46,6 +47,7 @@ export default function (eleventyConfig) {
     return MDY;
   });
 
+  // DATE FORMAT
   eleventyConfig.addFilter("dateFormat", function(value) {
     const temp = value.toISOString();
     const day = temp.slice(8,10);
