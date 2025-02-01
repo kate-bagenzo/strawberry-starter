@@ -102,8 +102,7 @@ NeoCities.prototype.upload = function(files, callback) {
 if (process.env.NEOCITIES_API) {
   const api = new NeoCities(process.env.NEOCITIES_API);
   const config = jsonc.parse(fs.readFileSync('src/_data/config.jsonc', 'utf8'));
-  let subDir;
-  config.siteSubDir.slice(-1) == '/' ? subDir = config.siteSubDir.slice(0, -1) : subDir = config.siteSubDir;
+  const subDir = config.siteSubDir;
 
   const toUpload = [];
   fs.readdir('_site', {recursive: true, withFileTypes: true}, (err, files) => {
@@ -112,10 +111,11 @@ if (process.env.NEOCITIES_API) {
       }
       files.forEach( (file) => {
           if (file.isFile()) {
-              const newPath = file.parentPath.replace("_site", subDir);
+              const newName = path.normalize(`${file.parentPath.replace("_site", subDir)}/${file.name}`).replace(/\\/g, '/');
+              const newPath = path.normalize(`${file.parentPath}/${file.name}`).replace(/\\/g, '/');
               toUpload.push({
-                  name: `${newPath}/${file.name}`,
-                  path: `${file.parentPath}/${file.name}`
+                  name: newName,
+                  path: newPath
               });
           }
       });
