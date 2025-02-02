@@ -79,6 +79,10 @@ pre {
     margin-left: auto;
 }
 
+.pageprev {
+    margin-right: 1rem;
+}
+
 .pagectrl p {
     margin: 0;
 }
