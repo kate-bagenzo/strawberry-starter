@@ -18,11 +18,18 @@ exclude-result-prefixes="atom"
         <header>
             <h1><xsl:value-of select="atom:feed/atom:title" /> RSS Feed</h1>
             <h2><xsl:value-of select="atom:feed/atom:subtitle" /> </h2>
-            <p>by 
-                <a href="mailto:{atom:feed/atom:author/atom:email}">
-                <xsl:value-of select="atom:feed/atom:author/atom:name" />
-                </a>
-            </p>
+            <xsl:choose>
+                <xsl:when test="atom:feed/atom:author/atom:email">
+                    <p>by
+                        <a href="mailto:{atom:feed/atom:author/atom:email}">
+                        <xsl:value-of select="atom:feed/atom:author/atom:name" />
+                        </a>
+                    </p>
+                </xsl:when>
+                <xsl:otherwise>
+                    <p>by <xsl:value-of select="atom:feed/atom:author/atom:name" /></p>
+                </xsl:otherwise>
+            </xsl:choose>
             <time>Last update: <xsl:value-of select="substring(atom:feed/atom:updated, 0, 11)" /></time>
             <p>This is only a preview of the feed. 
             </p>
