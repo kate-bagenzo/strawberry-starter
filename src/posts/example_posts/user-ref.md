@@ -97,5 +97,11 @@ Here's an overview of the folders and files in Strawberry Starter. You can ignor
     * Config file for Node.
 - `README.md`
     * A very simple explanation of how to use your blog.
+    - This also contains a changelog detailing bug fixes/changes.
+        - You can see what version you're on by checking `package.json`.
 
 Since you looked, if you're **really** curious... why not go to [the 11ty homepage](https://www.11ty.dev/) and learn even more about how it works? This template is pretty basic and only scratches the surface. A warning, though - if you want to do something really complicated, you're probably better off starting from scratch!
+
+## Node
+Strawberry Starter was made with Node version # `20.18.1`. Running on lower versions may cause bugs.  
+You can see your Node version by typing `node -v` into a command line.

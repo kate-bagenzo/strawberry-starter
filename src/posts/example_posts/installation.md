@@ -10,6 +10,7 @@ Here's how to get started with your new blog:
 2. **Download & Install Node**.
     - Node is a javascript runtime that lets you create things for the web.
     - Grab it from the [Node website](https://nodejs.org/en).
+        - Note: If you've *already* installed Node, be sure to update to the newest version.
 3. **Open a Command Line in Strawberry Starter's folder**
     - Never used one? It's a program that lets you type computer commands.
         - **🪟 Windows**: Powershell is built-in, and what I recommend you use. If you're familiar with the "Command Prompt", that'll *probably* work, but it's not recommended for a variety of reasons.

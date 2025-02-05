@@ -16,3 +16,9 @@ I promise the [installation guide on the homepage](https://strawberrystarter.neo
 - `npm run upload`
   - Builds the site, then uploads it to [Neocities](https://neocities.org/)
   - This requires supplying your Neocities API key: read `.env` and follow the instructions.
+
+## Changelog
+
+### 1.0.1
+- Node version used now listed in user-ref.
+- Installation guide reminds users to update Node.
