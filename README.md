@@ -19,6 +19,9 @@ I promise the [installation guide on the homepage](https://strawberrystarter.neo
 
 ## Changelog
 
+### 1.0.2
+- Fixed malformed link previews (affected Mastodon, mainly).
+
 ### 1.0.1
 - Node version used now listed in user-ref.
 - Installation guide reminds users to update Node.
