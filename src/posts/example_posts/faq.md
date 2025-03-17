@@ -5,7 +5,7 @@ date: 2025-01-04
 Some answers for miscellaneous issues or concerns:
 
 ## The dev server is acting strangely / not showing updates!
-Are you on Windows? The 11ty dev server has some bugs - Strawberry Starter comes with a patch for a big one (thanks [Sean](https://seans.site/)!), but things can still look weird sometimes. Regardless of operating system - if you notice anything odd, my advice is to stop the dev server, and then start it again. If that doesn't fix anything, try manually deleting `_site`, and doing a hard refresh of the page with CTRL+SHIFT+R.
+Are you on Windows? The 11ty dev server isn't perfect - things can look weird sometimes. Regardless of operating system - if you notice anything odd, my advice is to stop the dev server, and then start it again. If that doesn't fix anything, try manually deleting `_site`, rerunning `npm run dev`, and doing a hard refresh of the page with CTRL+SHIFT+R.
 
 ## How can I change the date format?
 Go into `eleventy.config.js` and you'll find two filters, `lastUpdate` and `dateFormat`. The former controls the last modified indicator at the bottom of your blog, and the latter controls the date that appears next to posts. If you're familiar with JavaScript, you can edit the return value yourself, but if not, there are some presets you can switch to. For example - if you wanted the post dates to appear in month/day/year format, just change `return DMY;` to `return MDY;`.
@@ -24,6 +24,13 @@ Delete the `node_modules` folder.
 (I also **STRONGLY** recommend you delete `.env.local` if you've created it, just for security reasons. This is especially important if you're going to upload your blog to a storage service you don't control, like Dropbox or Google Drive. You can always remake it later - you don't want to ever risk someone getting control of your site!)    
 Once those tasks are both done, you can store your blog anywhere. It's a good idea to make a `.zip` to save on file space.  
 When you deploy your site from backup, run `npm install` again, and the `node_modules` folder will return.
+
+## How do I migrate my blog to a newer version?
+Download the new version and copy over:
+    your `config.jsonc`
+    your `posts/`, `info/`, and `assets/`
+    your `.env.local`
+If you've edited your html templates or etc I recommend not copying those as they can change with updates. You'll have to remake your changes on the new version - sorry!
 
 ## I have a question not answered here.
 Try making a comment on the itch page, opening an issue or pull request on the Github (if you know how to do that) or, alternatively, feel free to reach out to me on social media or email. Or if you just want to show me a cool blog you made 😊
