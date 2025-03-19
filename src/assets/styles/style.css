@@ -17,7 +17,8 @@ body {
     margin-bottom: 2rem;
 }
 
-header h1 {
+header h1,
+header h2 {
     margin-bottom: 0.2rem;
 }
 
@@ -122,6 +123,28 @@ iframe {
     flex-direction: column;
     align-items: center;
     max-width: 100%;
+}
+
+.tagList {
+    list-style-type: none;
+    padding: 0.25rem;
+    padding-left: 0;
+}
+
+.tagList a {
+    font-size: 1.5rem;
+}
+
+.tagList p {
+    margin-top: 0.1rem;
+}
+
+.tagged {
+    margin-top: 3rem;
+}
+
+.tagged h2 {
+    font-size: 2rem;
 }
 
 img[src*='berrysprite.png'] {

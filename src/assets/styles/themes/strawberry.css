@@ -101,3 +101,8 @@ ul li ul li::marker,
 ol li ul li::marker {
     color: var(--nested-ul-color);
 }
+
+hr {
+    color: var(--main-header-color);
+    border: 2px dashed;
+}

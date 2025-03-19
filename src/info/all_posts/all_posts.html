@@ -11,3 +11,8 @@ date: 2025-01-01
 {% else %}
 <p>No posts yet!</p>
 {% endif %}
+
+{% if collections | filterTags %}
+<h2>Posts by tag:</h2>
+{% include "allTags.html" %}
+{% endif %}

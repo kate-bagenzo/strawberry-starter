@@ -1,6 +1,8 @@
 ---
 title: FAQ & Troubleshooting
 date: 2025-01-04
+tags:
+- strawberry
 ---
 Some answers for miscellaneous issues or concerns:
 

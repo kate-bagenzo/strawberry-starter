@@ -63,7 +63,29 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("getLatestFive", function(value) {
     const converted = value.slice(0, 5);
     return converted;
-    });
+  });
+
+  eleventyConfig.addFilter("filterTags", function(value) {
+    let newTags = [];
+    let anyTags = false;
+    for (let i in value) {
+      if (i != 'posts' && i != 'navbar' && i != 'all') {
+        newTags.push(i);
+        anyTags = true;
+      }
+    }
+    if (anyTags) {
+      return newTags.sort();
+    } else {
+      return false;
+    }
+
+  });
+
+  eleventyConfig.addFilter("debug", function(value) {
+    console.log(value);
+    return value;
+  });
 
   return {
     dir: {

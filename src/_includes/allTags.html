@@ -1,0 +1,9 @@
+<ul class="tagList">
+    {% assign allTags = collections | filterTags %}
+    {% for tag in allTags %}
+        <li>
+            <a href="/tags/{{ tag }}" class="post-tag">{{ tag }}</a>
+            <p>{{ collections[tag].length }} posts</p>
+        </li>
+    {% endfor %}
+</ul>

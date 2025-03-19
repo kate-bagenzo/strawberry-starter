@@ -1,7 +1,10 @@
 ---
 title: Installation Guide
 date: 2025-01-01
-tags: navbar
+tags:
+- navbar
+- guide
+- strawberry
 ---
 Here's how to get started with your new blog:
 1. **Download & Unzip Strawberry Starter**.

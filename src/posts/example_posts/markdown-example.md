@@ -1,6 +1,8 @@
 ---
 title: Markdown Examples
 date: 2025-01-03
+tags:
+- strawberry
 ---
 This post is a showcase of how to write Markdown, featuring various examples of the elements you can create. Open this post in a text editor so you can see exactly how they've been added.
 

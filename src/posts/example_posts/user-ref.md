@@ -1,6 +1,9 @@
 ---
 title: User Reference
 date: 2025-01-02
+tags:
+- strawberry
+- guide
 ---
 This page explains how to do various things. You can find more step-by-step instructions in the installation guide, but here information is presented more simply for quick reference.
 

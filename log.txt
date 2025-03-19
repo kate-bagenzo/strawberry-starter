@@ -1,0 +1,583 @@
+
+> strawberry-starter@1.0.2 dev
+> rimraf _site/ && npx @11ty/eleventy --serve --port 1234
+
+[
+  'guide',
+  [
+    {
+      template: [Template],
+      rawInput: "Here's how to get started with your new blog:\n" +
+        '1. **Download & Unzip Strawberry Starter**.\n' +
+        '    - You can grab it from [itch.io](https://bagenzo.itch.io/strawberry-starter) or [Github](https://github.com/kate-bagenzo/strawberry-starter).\n' +
+        "    - Unzip it wherever - you can move the folder around later without issues, so don't worry.\n" +
+        '2. **Download & Install Node**.\n' +
+        '    - Node is a javascript runtime that lets you create things for the web.\n' +
+        '    - Grab it from the [Node website](https://nodejs.org/en).\n' +
+        "        - Note: If you've *already* installed Node, be sure to update to the newest version.\n" +
+        "3. **Open a Command Line in Strawberry Starter's folder**\n" +
+        "    - Never used one? It's a program that lets you type computer commands.\n" +
+        `        - **🪟 Windows**: Powershell is built-in, and what I recommend you use. If you're familiar with the "Command Prompt", that'll *probably* work, but it's not recommended for a variety of reasons.\n` +
+        '        - **🍎 macOS**: The program is just called Terminal. Simple!\n' +
+        `        - **🐧 Linux**: You definitely have it, but it's called something different depending on what kind of Linux you're running. Search for "Terminal" or "Shell".\n` +
+        '    - You can probably open your chosen command line in the folder by right clicking the open folder and selecting "Open a Terminal", but if not, open one of these programs and type `cd path/to/template/`, where `path/to/template` is the full path you unzipped Strawberry Starter to.\n' +
+        '4. **Execute the command: `npm install`**\n' +
+        "    - You'll see some output, and probably some warnings and notifications. Unless you see a big ERROR, you should be okay.\n" +
+        "    - > **🪟 On Windows**: You might get a Powershell error here! If it says you don't have permission to run scripts, then copy and paste this command:\n" +
+        '         - > `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted`\n' +
+        "         - > You can right click -> paste this, or paste it with CTRL+SHIFT+V. Beware: command lines are finnicky and won't let you copy or paste with the usual shortcuts!\n" +
+        '         - > Then, try `npm install` again.\n' +
+        "         - > If that doesn't work, try again, but running Powershell as admin.\n" +
+        '\n' +
+        "You only need to run `npm install` once to setup. Now you're ready to start blogging!\n" +
+        '\n' +
+        '## Starting the development server\n' +
+        "There's a live server you can run to preview your changes as you make them. It's super convenient!  \n" +
+        'Start the server with the command `npm run dev`. Now, open [`localhost:1234`](localhost:1234/) in your browser.  \n' +
+        "This is a preview of what your blog looks like, and it'll update automatically as you save files.\n" +
+        "> **🪟 On Windows**: You might see a firewall permission prompt. Allow the script to bypass the firewall, or it won't work.\n" +
+        '\n' +
+        '## Renaming & customizing your blog\n' +
+        "Go to the `src` folder. This is where your blog's files live.  \n" +
+        "There's a lot of stuff here, but you don't need to worry about most it! For now, let's go to `_data` and open the file named `config.jsonc`.\n" +
+        '### A brief aside about JSON\n' +
+        'If you\'ve never seen a `.json` or `.jsonc` file before - don\'t worry, it\'s not complicated! It\'s just a way to store text so that it can be easily read by programs. The format of JSON is pretty simple: a bunch of `keys` and `values`, paired like so: `"key": "value",`. These keys and values are contained within two {curly braces}, which you\'ll see at the start and end of the file.\n' +
+        '\n' +
+        'Note the quotation marks and the comma! **All of the key-value pairs (except for the last) must have a comma**. The keys and values must also be enclosed with quotation marks. Be sure not to accidentally change that while editing your config file, or your blog will stop working!\n' +
+        '\n' +
+        '`config.jsonc` contains data that appears in a few places in your blog. Take the time now to replace the defaults, being careful not to disturb any quotation marks or commas or curly braces:\n' +
+        '- `siteName`\n' +
+        '    - The name of your blog. Appears on the footer, the RSS feed, and the link preview (i.e. the little image when you link to a site on social media).\n' +
+        '- `siteDescription`\n' +
+        '    - A small description of your blog. Appears on the RSS feed.\n' +
+        '- `siteURL`\n' +
+        '    - The public URL of your blog, e.g. (example.neocities.org) *Required* for the link preview and RSS feed to function correctly.\n' +
+        '- `siteAuthor`\n' +
+        '    - Your name. Appears on the footer and RSS feed.\n' +
+        '- `siteLang`\n' +
+        '    - A two-letter code indicating what language your blog is in. Used internally for various things.\n' +
+        '- `authorLink`\n' +
+        '    - A link to your personal website or social media. Appears on the footer. You can leave this blank if you prefer.\n' +
+        '- `authorContact`\n' +
+        '    -Your email. Appears on the footer. You can leave this blank if you prefer.\n' +
+        '- `siteStyle`\n' +
+        '    - The theme used by your blog. Themes are located in `src/assets/styles/themes/`. You can use (or edit) one of the premade themes, or create your own if you know CSS.\n' +
+        '- `siteSubDir`\n' +
+        '    - Set this only if you want to upload your blog to a subdirectory.\n' +
+        '    - e.g. - set this to `/blog/` if your site will be at `example.org/blog/` instead of `example.org`.\n' +
+        '    - This setting will automatically change all the links on your blog to work with your new subdirectory.\n' +
+        '        - e.g. When linking images in posts, you can just do `/assets/images/example.jpg`, instead of `/blog/assets/images/bowl_of_berries.jpg`\n' +
+        "    - **⚠️ Warning**: If you're uploading to Neocities and already have a homepage with content in it, BE SURE TO SET THIS!\n" +
+        '        - Uploading to Neocities will OVERWRITE content like your `index.html` !\n' +
+        '\n' +
+        '### An aside about text editors\n' +
+        "You can use whatever text editor you want to edit! I like VS Code or Notepad++, but you can even use Notepad if you want. The only important thing is that it shouldn't be a *word processor*, like Microsoft Word or Libreoffice Writer.\n" +
+        '\n' +
+        '## Making posts\n' +
+        'Time to write your first post! Go to `src/posts` and create a new `.md` file. You can name it whatever you want, but keep in mind that the filename will become the URL to your post (e.g. post you\'re reading now is named "installation.md", so if it was uploaded to `example.neocities.org`, its URL would be "`example.neocities.org/posts/installation`").  \n' +
+        'Blog posts start with a little thing called *front matter*. It looks like this:\n' +
+        '```\n' +
+        '---\n' +
+        'title: The title of the blog post goes here\n' +
+        'date: 2025-12-25\n' +
+        '---\n' +
+        '```\n' +
+        `The title appears as a header on the post page, and also on internal links (on the frontpage's "Latest posts" section and the "All posts" page).  \n` +
+        "The date is actually optional - if it's not present, the file creation date will be used. This can cause some issues if you backup your posts somewhere and then reupload them - the file creation date might change! I highly recommend you always manually set the date.  \n" +
+        "Create a new post now - give it a title and today's date. When you save the file, you should see it appear on the dev server.\n" +
+        '\n' +
+        '## The index and navbar\n' +
+        "There are some other pages on your site besides blog posts, though! You'll notice there's a navigation bar at the top of your blog with three links: `home`, `all_posts`, and `about`. These pages are all Markdown files, so editing them is similar to editing blog posts - they're just located in different places:\n" +
+        '- The home page (index) is located at `src/index.md`.\n' +
+        '- `all_posts.md` and `about.md` are found at `src/info`.\n' +
+        '    - Any .md file written in the `info` folder will also appear in the navbar!\n' +
+        `        - It won't count as a "blog post" though, so it won't appear in "Latest posts", or update the RSS Feed.\n` +
+        '        - If you want, you can instead add a blog post to the navbar by adding `tags: navbar` to its front matter.\n' +
+        "            - In fact, if you've noticed, this very installation guide has such a tag!\n" +
+        'If the difference between .md files in `posts` and `info` is confusing to you, don\'t worry. The main difference is that only `posts` will appear in "Latest posts" or "All posts", while `info`s will only appear in the navbar.\n' +
+        '\n' +
+        '## Favicon and Preview\n' +
+        'There are two last things you want to customize:\n' +
+        '- The favicon, which appears in the browser tab and bookmarks.\n' +
+        '    - Found at `src/favicon.ico`\n' +
+        '- The link preview, which appears when you link to your blog on some sites, like social media.\n' +
+        '    - Found at `src/social.png`\n' +
+        '\n' +
+        "Both of these are images you can edit in any graphics editor. Don't change their filenames or formats!\n" +
+        '\n' +
+        '## Building and uploading your blog\n' +
+        'To get your blog ready for uploading somewhere, go to the command line and type `npm run build`. (If the dev server is still running, you can stop it with CTRL+C first.) A folder called `_site` will appear. That folder is your completed blog, and is ready to be uploaded to whatever hosting provider you choose!\n' +
+        '\n' +
+        "[Neocities](https://neocities.org/) is a cool hosting provider with a free tier! If you're going to use Neocities, Strawberry Starter can instead automatically upload your site there by using the command `npm run upload`! However, it requires a bit of setup, so follow these steps:\n" +
+        '1. **[Go to your Neocities account settings](https://neocities.org/settings#sites)**\n' +
+        '2. **Click "manage site settings", then "API".**\n' +
+        '3. **Copy your API key**.\n' +
+        "    - If you haven't generated an API key, do so now by pressing the button.\n" +
+        "    - Keep this safe! Don't share it with anyone, or they can edit your site.\n" +
+        '4. **Open the `.env` file in the base of your blog and follow its instructions.**\n' +
+        "    - Don't edit `.env` itself! It's just a template of what your `.env.local` should look like, and should be kept that way to ensure your API key stays safe.\n" +
+        '5. **(Optional) Set a subdirectory**\n' +
+        "    - If you have an empty site and want your blog to live at `example.neocities.org`, then you don't need to do anything else.\n" +
+        '    - HOWEVER, if you already have a homepage at the base of your Neocities, you can instead upload to a subdirectory like `example.neocities.org/blog/`\n' +
+        '        - To do this, change the `siteSubDir` in `config.jsonc` to something else, e.g. `/blog/`.\n' +
+        '    - **⚠️ Warning**: BE SURE to set this if you already have a homepage! Uploading to Neocities will OVERWRITE conte'... 874 more characters,
+      groupNumber: 0,
+      data: [Object],
+      page: [Object],
+      inputPath: './src/posts/example_posts/installation.md',
+      fileSlug: 'installation',
+      filePathStem: '/posts/example_posts/installation',
+      date: 2025-01-01T00:00:00.000Z,
+      outputPath: './_site/posts/example_posts/installation/index.html',
+      url: '/posts/example_posts/installation/',
+      templateContent: [Getter/Setter],
+      content: [Getter/Setter]
+    },
+    {
+      template: [Template],
+      rawInput: 'Some answers for miscellaneous issues or concerns:\n' +
+        '\n' +
+        '## The dev server is acting strangely / not showing updates!\n' +
+        "Are you on Windows? The 11ty dev server isn't perfect - things can look weird sometimes. Regardless of operating system - if you notice anything odd, my advice is to stop the dev server, and then start it again. If that doesn't fix anything, try manually deleting `_site`, rerunning `npm run dev`, and doing a hard refresh of the page with CTRL+SHIFT+R.\n" +
+        '\n' +
+        '## How can I change the date format?\n' +
+        "Go into `eleventy.config.js` and you'll find two filters, `lastUpdate` and `dateFormat`. The former controls the last modified indicator at the bottom of your blog, and the latter controls the date that appears next to posts. If you're familiar with JavaScript, you can edit the return value yourself, but if not, there are some presets you can switch to. For example - if you wanted the post dates to appear in month/day/year format, just change `return DMY;` to `return MDY;`.\n" +
+        '\n' +
+        '## This is cool, but I want to tinker with it...\n' +
+        'I recommend a few starting places:\n' +
+        '- [MDN Learning](https://developer.mozilla.org/en-US/docs/Learn_web_development)\n' +
+        `    - In addition to being a great reference for HTML, CSS and JS, the Mozilla Developer Network also has a bunch of tutorials, if you're not familiar with them. They range in experience level from "how to open a code editor" to "how to make your own videogame".\n` +
+        '    - In my opinion, the best resource for learning web development online.\n' +
+        '- [11ty Tutorials](https://www.11ty.dev/docs/tutorials/)\n' +
+        '    - The videos here do a great job explaining the basics of 11ty: making files with tags and iterating over collections.\n' +
+        "    - They mostly scratch the surface, but it's good to start here and then search what you want to do. 11ty is very basic out of the box, but you can extend it a lot, usually by editing `eleventy.config.js`.\n" +
+        '\n' +
+        '## How can I back up my blog?\n' +
+        'Delete the `node_modules` folder.  \n' +
+        "(I also **STRONGLY** recommend you delete `.env.local` if you've created it, just for security reasons. This is especially important if you're going to upload your blog to a storage service you don't control, like Dropbox or Google Drive. You can always remake it later - you don't want to ever risk someone getting control of your site!)    \n" +
+        "Once those tasks are both done, you can store your blog anywhere. It's a good idea to make a `.zip` to save on file space.  \n" +
+        'When you deploy your site from backup, run `npm install` again, and the `node_modules` folder will return.\n' +
+        '\n' +
+        '## How do I migrate my blog to a newer version?\n' +
+        'Download the new version and copy over:\n' +
+        '    your `config.jsonc`\n' +
+        '    your `posts/`, `info/`, and `assets/`\n' +
+        '    your `.env.local`\n' +
+        "If you've edited your html templates or etc I recommend not copying those as they can change with updates. You'll have to remake your changes on the new version - sorry!\n" +
+        '\n' +
+        '## I have a question not answered here.\n' +
+        'Try making a comment on the itch page, opening an issue or pull request on the Github (if you know how to do that) or, alternatively, feel free to reach out to me on social media or email. Or if you just want to show me a cool blog you made 😊\n',
+      groupNumber: 0,
+      data: [Object],
+      page: [Object],
+      inputPath: './src/posts/example_posts/faq.md',
+      fileSlug: 'faq',
+      filePathStem: '/posts/example_posts/faq',
+      date: 2025-01-04T00:00:00.000Z,
+      outputPath: './_site/posts/example_posts/faq/index.html',
+      url: '/posts/example_posts/faq/',
+      templateContent: [Getter/Setter],
+      content: [Getter/Setter]
+    }
+  ]
+]
+[
+  'strawberry',
+  [
+    {
+      template: [Template],
+      rawInput: "Here's how to get started with your new blog:\n" +
+        '1. **Download & Unzip Strawberry Starter**.\n' +
+        '    - You can grab it from [itch.io](https://bagenzo.itch.io/strawberry-starter) or [Github](https://github.com/kate-bagenzo/strawberry-starter).\n' +
+        "    - Unzip it wherever - you can move the folder around later without issues, so don't worry.\n" +
+        '2. **Download & Install Node**.\n' +
+        '    - Node is a javascript runtime that lets you create things for the web.\n' +
+        '    - Grab it from the [Node website](https://nodejs.org/en).\n' +
+        "        - Note: If you've *already* installed Node, be sure to update to the newest version.\n" +
+        "3. **Open a Command Line in Strawberry Starter's folder**\n" +
+        "    - Never used one? It's a program that lets you type computer commands.\n" +
+        `        - **🪟 Windows**: Powershell is built-in, and what I recommend you use. If you're familiar with the "Command Prompt", that'll *probably* work, but it's not recommended for a variety of reasons.\n` +
+        '        - **🍎 macOS**: The program is just called Terminal. Simple!\n' +
+        `        - **🐧 Linux**: You definitely have it, but it's called something different depending on what kind of Linux you're running. Search for "Terminal" or "Shell".\n` +
+        '    - You can probably open your chosen command line in the folder by right clicking the open folder and selecting "Open a Terminal", but if not, open one of these programs and type `cd path/to/template/`, where `path/to/template` is the full path you unzipped Strawberry Starter to.\n' +
+        '4. **Execute the command: `npm install`**\n' +
+        "    - You'll see some output, and probably some warnings and notifications. Unless you see a big ERROR, you should be okay.\n" +
+        "    - > **🪟 On Windows**: You might get a Powershell error here! If it says you don't have permission to run scripts, then copy and paste this command:\n" +
+        '         - > `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted`\n' +
+        "         - > You can right click -> paste this, or paste it with CTRL+SHIFT+V. Beware: command lines are finnicky and won't let you copy or paste with the usual shortcuts!\n" +
+        '         - > Then, try `npm install` again.\n' +
+        "         - > If that doesn't work, try again, but running Powershell as admin.\n" +
+        '\n' +
+        "You only need to run `npm install` once to setup. Now you're ready to start blogging!\n" +
+        '\n' +
+        '## Starting the development server\n' +
+        "There's a live server you can run to preview your changes as you make them. It's super convenient!  \n" +
+        'Start the server with the command `npm run dev`. Now, open [`localhost:1234`](localhost:1234/) in your browser.  \n' +
+        "This is a preview of what your blog looks like, and it'll update automatically as you save files.\n" +
+        "> **🪟 On Windows**: You might see a firewall permission prompt. Allow the script to bypass the firewall, or it won't work.\n" +
+        '\n' +
+        '## Renaming & customizing your blog\n' +
+        "Go to the `src` folder. This is where your blog's files live.  \n" +
+        "There's a lot of stuff here, but you don't need to worry about most it! For now, let's go to `_data` and open the file named `config.jsonc`.\n" +
+        '### A brief aside about JSON\n' +
+        'If you\'ve never seen a `.json` or `.jsonc` file before - don\'t worry, it\'s not complicated! It\'s just a way to store text so that it can be easily read by programs. The format of JSON is pretty simple: a bunch of `keys` and `values`, paired like so: `"key": "value",`. These keys and values are contained within two {curly braces}, which you\'ll see at the start and end of the file.\n' +
+        '\n' +
+        'Note the quotation marks and the comma! **All of the key-value pairs (except for the last) must have a comma**. The keys and values must also be enclosed with quotation marks. Be sure not to accidentally change that while editing your config file, or your blog will stop working!\n' +
+        '\n' +
+        '`config.jsonc` contains data that appears in a few places in your blog. Take the time now to replace the defaults, being careful not to disturb any quotation marks or commas or curly braces:\n' +
+        '- `siteName`\n' +
+        '    - The name of your blog. Appears on the footer, the RSS feed, and the link preview (i.e. the little image when you link to a site on social media).\n' +
+        '- `siteDescription`\n' +
+        '    - A small description of your blog. Appears on the RSS feed.\n' +
+        '- `siteURL`\n' +
+        '    - The public URL of your blog, e.g. (example.neocities.org) *Required* for the link preview and RSS feed to function correctly.\n' +
+        '- `siteAuthor`\n' +
+        '    - Your name. Appears on the footer and RSS feed.\n' +
+        '- `siteLang`\n' +
+        '    - A two-letter code indicating what language your blog is in. Used internally for various things.\n' +
+        '- `authorLink`\n' +
+        '    - A link to your personal website or social media. Appears on the footer. You can leave this blank if you prefer.\n' +
+        '- `authorContact`\n' +
+        '    -Your email. Appears on the footer. You can leave this blank if you prefer.\n' +
+        '- `siteStyle`\n' +
+        '    - The theme used by your blog. Themes are located in `src/assets/styles/themes/`. You can use (or edit) one of the premade themes, or create your own if you know CSS.\n' +
+        '- `siteSubDir`\n' +
+        '    - Set this only if you want to upload your blog to a subdirectory.\n' +
+        '    - e.g. - set this to `/blog/` if your site will be at `example.org/blog/` instead of `example.org`.\n' +
+        '    - This setting will automatically change all the links on your blog to work with your new subdirectory.\n' +
+        '        - e.g. When linking images in posts, you can just do `/assets/images/example.jpg`, instead of `/blog/assets/images/bowl_of_berries.jpg`\n' +
+        "    - **⚠️ Warning**: If you're uploading to Neocities and already have a homepage with content in it, BE SURE TO SET THIS!\n" +
+        '        - Uploading to Neocities will OVERWRITE content like your `index.html` !\n' +
+        '\n' +
+        '### An aside about text editors\n' +
+        "You can use whatever text editor you want to edit! I like VS Code or Notepad++, but you can even use Notepad if you want. The only important thing is that it shouldn't be a *word processor*, like Microsoft Word or Libreoffice Writer.\n" +
+        '\n' +
+        '## Making posts\n' +
+        'Time to write your first post! Go to `src/posts` and create a new `.md` file. You can name it whatever you want, but keep in mind that the filename will become the URL to your post (e.g. post you\'re reading now is named "installation.md", so if it was uploaded to `example.neocities.org`, its URL would be "`example.neocities.org/posts/installation`").  \n' +
+        'Blog posts start with a little thing called *front matter*. It looks like this:\n' +
+        '```\n' +
+        '---\n' +
+        'title: The title of the blog post goes here\n' +
+        'date: 2025-12-25\n' +
+        '---\n' +
+        '```\n' +
+        `The title appears as a header on the post page, and also on internal links (on the frontpage's "Latest posts" section and the "All posts" page).  \n` +
+        "The date is actually optional - if it's not present, the file creation date will be used. This can cause some issues if you backup your posts somewhere and then reupload them - the file creation date might change! I highly recommend you always manually set the date.  \n" +
+        "Create a new post now - give it a title and today's date. When you save the file, you should see it appear on the dev server.\n" +
+        '\n' +
+        '## The index and navbar\n' +
+        "There are some other pages on your site besides blog posts, though! You'll notice there's a navigation bar at the top of your blog with three links: `home`, `all_posts`, and `about`. These pages are all Markdown files, so editing them is similar to editing blog posts - they're just located in different places:\n" +
+        '- The home page (index) is located at `src/index.md`.\n' +
+        '- `all_posts.md` and `about.md` are found at `src/info`.\n' +
+        '    - Any .md file written in the `info` folder will also appear in the navbar!\n' +
+        `        - It won't count as a "blog post" though, so it won't appear in "Latest posts", or update the RSS Feed.\n` +
+        '        - If you want, you can instead add a blog post to the navbar by adding `tags: navbar` to its front matter.\n' +
+        "            - In fact, if you've noticed, this very installation guide has such a tag!\n" +
+        'If the difference between .md files in `posts` and `info` is confusing to you, don\'t worry. The main difference is that only `posts` will appear in "Latest posts" or "All posts", while `info`s will only appear in the navbar.\n' +
+        '\n' +
+        '## Favicon and Preview\n' +
+        'There are two last things you want to customize:\n' +
+        '- The favicon, which appears in the browser tab and bookmarks.\n' +
+        '    - Found at `src/favicon.ico`\n' +
+        '- The link preview, which appears when you link to your blog on some sites, like social media.\n' +
+        '    - Found at `src/social.png`\n' +
+        '\n' +
+        "Both of these are images you can edit in any graphics editor. Don't change their filenames or formats!\n" +
+        '\n' +
+        '## Building and uploading your blog\n' +
+        'To get your blog ready for uploading somewhere, go to the command line and type `npm run build`. (If the dev server is still running, you can stop it with CTRL+C first.) A folder called `_site` will appear. That folder is your completed blog, and is ready to be uploaded to whatever hosting provider you choose!\n' +
+        '\n' +
+        "[Neocities](https://neocities.org/) is a cool hosting provider with a free tier! If you're going to use Neocities, Strawberry Starter can instead automatically upload your site there by using the command `npm run upload`! However, it requires a bit of setup, so follow these steps:\n" +
+        '1. **[Go to your Neocities account settings](https://neocities.org/settings#sites)**\n' +
+        '2. **Click "manage site settings", then "API".**\n' +
+        '3. **Copy your API key**.\n' +
+        "    - If you haven't generated an API key, do so now by pressing the button.\n" +
+        "    - Keep this safe! Don't share it with anyone, or they can edit your site.\n" +
+        '4. **Open the `.env` file in the base of your blog and follow its instructions.**\n' +
+        "    - Don't edit `.env` itself! It's just a template of what your `.env.local` should look like, and should be kept that way to ensure your API key stays safe.\n" +
+        '5. **(Optional) Set a subdirectory**\n' +
+        "    - If you have an empty site and want your blog to live at `example.neocities.org`, then you don't need to do anything else.\n" +
+        '    - HOWEVER, if you already have a homepage at the base of your Neocities, you can instead upload to a subdirectory like `example.neocities.org/blog/`\n' +
+        '        - To do this, change the `siteSubDir` in `config.jsonc` to something else, e.g. `/blog/`.\n' +
+        '    - **⚠️ Warning**: BE SURE to set this if you already have a homepage! Uploading to Neocities will OVERWRITE conte'... 874 more characters,
+      groupNumber: 0,
+      data: [Object],
+      page: [Object],
+      inputPath: './src/posts/example_posts/installation.md',
+      fileSlug: 'installation',
+      filePathStem: '/posts/example_posts/installation',
+      date: 2025-01-01T00:00:00.000Z,
+      outputPath: './_site/posts/example_posts/installation/index.html',
+      url: '/posts/example_posts/installation/',
+      templateContent: [Getter/Setter],
+      content: [Getter/Setter]
+    },
+    {
+      template: [Template],
+      rawInput: 'This page explains how to do various things. You can find more step-by-step instructions in the installation guide, but here information is presented more simply for quick reference.\n' +
+        '\n' +
+        '## How to use your blog\n' +
+        '- **(Optional) Run the live preview server**\n' +
+        "    - In a terminal that's navigated to the Strawberry Starter folder, type `npm run dev`.\n" +
+        '    - Open a browser and go to `localhost:1234`.\n' +
+        '    - You can now preview your changes live!\n' +
+        '- **Adding or editing a blog post**\n' +
+        '    - Navigate to `src/posts/` and make or edit a .md (markdown) file.\n' +
+        '        - You can name .md files whatever, but keep in mind that the filename will be the URL to the post.\n' +
+        '- **Building your changes**\n' +
+        '    - In the terminal, stop the development server by pressing CTRL+C\n' +
+        '    - Execute the command `npm run build`.\n' +
+        '    - Your site is now built and ready for export in the `_site` folder!\n' +
+        '        - OR, you can upload directly to Neocities with `npm run upload`! Requires some setup - see installation guide.\n' +
+        '\n' +
+        '## Anatomy of Config.jsonc\n' +
+        '- `siteName`\n' +
+        '    - The name of your blog. Appears on the footer, the RSS feed, and the link preview (i.e. the little image when you link to a site on social media or discord, etc).\n' +
+        '- `siteDescription`\n' +
+        '    - A small description of your site. Appears on the link preview and RSS feed.\n' +
+        '- `siteURL`\n' +
+        '    - The public URL of your blog, e.g. (example.neocities.org) Needed for the link preview and RSS feed to function correctly.\n' +
+        '- `siteAuthor`\n' +
+        '    - Your name. Appears on the footer.\n' +
+        '- `siteLang`\n' +
+        '    - A two-letter code indicating what language your blog is in. Used internally for various things.\n' +
+        '- `authorLink`\n' +
+        '    - A link to your personal website or social media or etc. Appears on the footer. You can leave this blank if you prefer.\n' +
+        '- `authorContact`\n' +
+        '    - Your email. Appears on the footer. You can leave this blank if you prefer.\n' +
+        '- `siteStyle`\n' +
+        '    - The theme used by your blog. Themes are in located `src/assets/styles/themes/`. You can use (or edit) one of the premade themes, or create your own if you know CSS.\n' +
+        '- `siteSubDir`\n' +
+        '    - Set this only if you want to upload your blog to a subdirectory.\n' +
+        '    - e.g. - set this to `/blog/` if your site will be at `example.org/blog/` instead of `example.org`.\n' +
+        '    - This setting will change all the links on your blog to work with your new subdirectory.\n' +
+        '        - e.g. When linking images in posts, you can just do `/assets/images/example.jpg`, instead of `/blog/assets/images/bowl_of_berries.jpg`\n' +
+        "    - **⚠️ Warning**: If you're uploading to Neocities and already have a homepage with content in it, BE SURE TO SET THIS!\n" +
+        '        - Uploading to Neocities will OVERWRITE content like your `index.html` !\n' +
+        '\n' +
+        '## Commands\n' +
+        '- `npm install`\n' +
+        '    - This installs dependencies that your blog needs to function.\n' +
+        '    - You only need to run this once, to create the `node_modules` folder.\n' +
+        "        - If that folder is deleted (e.g. you got rid of it to back up your blog somewhere) you'll need to run this command again to build or use the dev server.\n" +
+        '- `npm run dev`\n' +
+        '    - This command starts a development server at [localhost:1234](localhost:1234).\n' +
+        "    - It live updates with any changes you make, so it's good to run this while writing to see a preview of your blog.\n" +
+        '- `npm run build`\n' +
+        "    - This command outputs your blog's files to the `_site/` folder.\n" +
+        '- `npm run upload`\n' +
+        '    - This command will build your site (as if you had typed `npm run build`), and then upload your site directly to Neocities.\n' +
+        "    - However, it won't work out of the box. Check the [installation guide](/posts/example_posts/installation) and the `.env` file for more info.\n" +
+        '\n' +
+        '### Detailed Folder Layout Reference\n' +
+        "Here's an overview of the folders and files in Strawberry Starter. You can ignore most of these and have a perfectly functional blog, but if you're curious and/or brave:\n" +
+        '- `_functions/`\n' +
+        "    - Contains various scripts run by Node during the site's build and install.\n" +
+        '- `_site/`\n' +
+        '    - Destination folder for your finished site after running `npm run build` or `npm run upload`.\n' +
+        '- `node_modules/`\n' +
+        '    - Contains various Node packages and dependencies.\n' +
+        '- `src/`\n' +
+        '    - `_data/`\n' +
+        '        - `config.jsonc`\n' +
+        '            - Contains various variables used throughout your blog.\n' +
+        '    - `_includes/`\n' +
+        '        - Contains HTML files that create the layout of your blog.\n' +
+        '        - These files also use Liquid, a templating language.\n' +
+        '    - `assets/`\n' +
+        '        - An assorted folder for storing things like images or scripts or styles. Anything placed in this folder will automatically be copied over to `_site/` when you run the `build` or `upload` command.\n' +
+        '    - `info/`\n' +
+        '        - Contains pages that will appear on the navbar at the top of your blog. By default, you have two: `all_posts` and `about`.\n' +
+        '        - If you want to add a new navbar section to your blog, add a .md file here.\n' +
+        '    - `posts/`\n' +
+        '        - Contains blog posts.\n' +
+        '        - If you want to add a new blog post, add a .md file here.\n' +
+        '    - `index.md`\n' +
+        '        - This is the homepage of your blog.\n' +
+        '- `social.png`\n' +
+        '    - This image appears in the preview card used when linking to your blog on social media.\n' +
+        '- `.env`\n' +
+        '    - This is a template explaining what a proper `.env.local` file should look like.\n' +
+        '- `.env.local`\n' +
+        "    * This file isn't created by default (for security reasons).\n" +
+        '    * Putting your Neocities API key here is necessary for `npm run upload` to work.\n' +
+        '- `.gitignore`\n' +
+        "    * Files ignored by git. If you know how to use git, then this is useful to you. If not, don't worry about it.\n" +
+        '- `eleventy.config.js`\n' +
+        '    * Config file for 11ty.\n' +
+        '- `package.json`\n' +
+        '    * Config file for Node.\n' +
+        '- `README.md`\n' +
+        '    * A very simple explanation of how to use your blog.\n' +
+        '    - This also contains a changelog detailing bug fixes/changes.\n' +
+        "        - You can see what version you're on by checking `package.json`.\n" +
+        '\n' +
+        "Since you looked, if you're **really** curious... why not go to [the 11ty homepage](https://www.11ty.dev/) and learn even more about how it works? This template is pretty basic and only scratches the surface. A warning, though - if you want to do something really complicated, you're probably better off starting from scratch!\n" +
+        '\n' +
+        '## Node\n' +
+        'Strawberry Starter was made with Node version # `20.18.1`. Running on lower versions may cause bugs.  \n' +
+        'You can see your Node version by typing `node -v` into a command line.',
+      groupNumber: 0,
+      data: [Object],
+      page: [Object],
+      inputPath: './src/posts/example_posts/user-ref.md',
+      fileSlug: 'user-ref',
+      filePathStem: '/posts/example_posts/user-ref',
+      date: 2025-01-02T00:00:00.000Z,
+      outputPath: './_site/posts/example_posts/user-ref/index.html',
+      url: '/posts/example_posts/user-ref/',
+      templateContent: [Getter/Setter],
+      content: [Getter/Setter]
+    },
+    {
+      template: [Template],
+      rawInput: "This post is a showcase of how to write Markdown, featuring various examples of the elements you can create. Open this post in a text editor so you can see exactly how they've been added.\n" +
+        '\n' +
+        'Additionally, I also recommend reading [a Markdown guide like this one](https://www.markdownguide.org/), or at least having it handy, so you can consult it when necessary.\n' +
+        '\n' +
+        '# Headings (this is level 1)\n' +
+        '## Heading level 2\n' +
+        '### Heading level 3\n' +
+        '#### Heading level 4\n' +
+        '##### Heading level 5\n' +
+        '###### Heading level 6\n' +
+        '\n' +
+        '## Paragraphs\n' +
+        'Strawberries are sweet and yummy, but so are some other things:  \n' +
+        'Halvah oat cake fruitcake dessert chocolate cake. Croissant cake marshmallow bonbon shortbread candy canes dragée chocolate caramels. Toffee toffee wafer croissant chocolate cake sugar plum liquorice apple pie. Cupcake lemon drops sweet pie cake brownie. Tart brownie biscuit danish sweet roll. Sugar plum cake donut toffee caramels bear claw jujubes. Cake halvah toffee bear claw jelly beans. Toffee jelly beans gingerbread brownie sesame snaps chocolate cake brownie danish biscuit. Sweet cupcake sweet roll powder muffin.  \n' +
+        'Fruitcake dessert marshmallow cake oat cake caramels jelly. Cake marshmallow carrot cake fruitcake muffin gingerbread tootsie roll sugar plum. Bonbon pudding wafer powder halvah lollipop dessert. Jelly-o chocolate bar cake topping cotton candy cotton candy halvah powder.\n' +
+        '\n' +
+        'If you want line breaks  \n' +
+        'Just add two spaces  \n' +
+        'At the end of your sentence  \n' +
+        '\n' +
+        '## Strong Text and Emphasis\n' +
+        'You can use **double asterisks** for strong text, and *single asterisks* for emphasis.  \n' +
+        'Those will usually show up as bold and italics, but themes/custom styling can override that!\n' +
+        '***You can also use triple asterisks for both of them***.\n' +
+        '\n' +
+        '## Blockquotes\n' +
+        '> This is a blockquote!\n' +
+        '\n' +
+        '> ### Blockquotes are quite neat\n' +
+        '>\n' +
+        '> You can do many things with them.\n' +
+        '> - As you can see, you can put other elements inside them.\n' +
+        '>\n' +
+        '>> They ***sure*** are a lot of **fun**.\n' +
+        '\n' +
+        '## Lists\n' +
+        'Names for "Strawberry" in a few languages:  \n' +
+        '1. "morango"\n' +
+        '2. "fresa"\n' +
+        '3. "fraise"\n' +
+        '4. "jagoda"\n' +
+        '\n' +
+        '- This is also a list\n' +
+        '- However\n' +
+        "    - It's unordered\n" +
+        "    - I think it's still cool\n" +
+        "- Don't you agree?\n" +
+        '\n' +
+        '* You can also use an asterisk.\n' +
+        '    * If you prefer.\n' +
+        '    - You can even mix the two!\n' +
+        '\n' +
+        '## Code Blocks\n' +
+        'If you need to `code`, you can use `backticks`.\n' +
+        '```\n' +
+        '# you can also create fenced code blocks\n' +
+        '# for multiline stuff\n' +
+        'if (strawberry) {\n' +
+        "    console.log('yum!');\n" +
+        '};\n' +
+        '```\n' +
+        '\n' +
+        '## Links\n' +
+        'To create a link, like, for example, [one to my site](https://bagenzos.house), just use square brackets for the text, and round brackets for the URL.\n' +
+        '\n' +
+        '## Images\n' +
+        'Images are fundamental to any blog, right?  \n' +
+        "It's similar to the link syntax, except the square brackets are for alt text, and the round brackets are for the file path. Also, don't forget the exclamation mark!\n" +
+        '![A delicious bowl of strawberries](/assets/images/bowl_of_berries.jpg)\n' +
+        '\n' +
+        '## HTML\n' +
+        "<p>Finally, when Markdown just doesn't cut it, you CAN write HTML, if you really want to. <em>Any valid HTML is also valid Markdown.</em></p>\n" +
+        "<p>You probably don't <em>want</em> to write HTML! But it does mean you can paste things in your posts like, for example, Youtube embeds!</p>\n" +
+        '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WEv5ZqkaS54?si=mcG95jGYfg2U0tdW&amp;controls=0&amp;start=12" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>\n' +
+        '\n' +
+        "That's it for this post! There's more you can do, but I think this covers most use cases. Be sure to read a full Markdown guide!",
+      groupNumber: 0,
+      data: [Object],
+      page: [Object],
+      inputPath: './src/posts/example_posts/markdown-example.md',
+      fileSlug: 'markdown-example',
+      filePathStem: '/posts/example_posts/markdown-example',
+      date: 2025-01-03T00:00:00.000Z,
+      outputPath: './_site/posts/example_posts/markdown-example/index.html',
+      url: '/posts/example_posts/markdown-example/',
+      templateContent: [Getter/Setter],
+      content: [Getter/Setter]
+    },
+    {
+      template: [Template],
+      rawInput: 'Some answers for miscellaneous issues or concerns:\n' +
+        '\n' +
+        '## The dev server is acting strangely / not showing updates!\n' +
+        "Are you on Windows? The 11ty dev server isn't perfect - things can look weird sometimes. Regardless of operating system - if you notice anything odd, my advice is to stop the dev server, and then start it again. If that doesn't fix anything, try manually deleting `_site`, rerunning `npm run dev`, and doing a hard refresh of the page with CTRL+SHIFT+R.\n" +
+        '\n' +
+        '## How can I change the date format?\n' +
+        "Go into `eleventy.config.js` and you'll find two filters, `lastUpdate` and `dateFormat`. The former controls the last modified indicator at the bottom of your blog, and the latter controls the date that appears next to posts. If you're familiar with JavaScript, you can edit the return value yourself, but if not, there are some presets you can switch to. For example - if you wanted the post dates to appear in month/day/year format, just change `return DMY;` to `return MDY;`.\n" +
+        '\n' +
+        '## This is cool, but I want to tinker with it...\n' +
+        'I recommend a few starting places:\n' +
+        '- [MDN Learning](https://developer.mozilla.org/en-US/docs/Learn_web_development)\n' +
+        `    - In addition to being a great reference for HTML, CSS and JS, the Mozilla Developer Network also has a bunch of tutorials, if you're not familiar with them. They range in experience level from "how to open a code editor" to "how to make your own videogame".\n` +
+        '    - In my opinion, the best resource for learning web development online.\n' +
+        '- [11ty Tutorials](https://www.11ty.dev/docs/tutorials/)\n' +
+        '    - The videos here do a great job explaining the basics of 11ty: making files with tags and iterating over collections.\n' +
+        "    - They mostly scratch the surface, but it's good to start here and then search what you want to do. 11ty is very basic out of the box, but you can extend it a lot, usually by editing `eleventy.config.js`.\n" +
+        '\n' +
+        '## How can I back up my blog?\n' +
+        'Delete the `node_modules` folder.  \n' +
+        "(I also **STRONGLY** recommend you delete `.env.local` if you've created it, just for security reasons. This is especially important if you're going to upload your blog to a storage service you don't control, like Dropbox or Google Drive. You can always remake it later - you don't want to ever risk someone getting control of your site!)    \n" +
+        "Once those tasks are both done, you can store your blog anywhere. It's a good idea to make a `.zip` to save on file space.  \n" +
+        'When you deploy your site from backup, run `npm install` again, and the `node_modules` folder will return.\n' +
+        '\n' +
+        '## How do I migrate my blog to a newer version?\n' +
+        'Download the new version and copy over:\n' +
+        '    your `config.jsonc`\n' +
+        '    your `posts/`, `info/`, and `assets/`\n' +
+        '    your `.env.local`\n' +
+        "If you've edited your html templates or etc I recommend not copying those as they can change with updates. You'll have to remake your changes on the new version - sorry!\n" +
+        '\n' +
+        '## I have a question not answered here.\n' +
+        'Try making a comment on the itch page, opening an issue or pull request on the Github (if you know how to do that) or, alternatively, feel free to reach out to me on social media or email. Or if you just want to show me a cool blog you made 😊\n',
+      groupNumber: 0,
+      data: [Object],
+      page: [Object],
+      inputPath: './src/posts/example_posts/faq.md',
+      fileSlug: 'faq',
+      filePathStem: '/posts/example_posts/faq',
+      date: 2025-01-04T00:00:00.000Z,
+      outputPath: './_site/posts/example_posts/faq/index.html',
+      url: '/posts/example_posts/faq/',
+      templateContent: [Getter/Setter],
+      content: [Getter/Setter]
+    }
+  ]
+]
+[11ty] Writing ./_site/feed.xml from ./src/eleventy-plugin-feed-strawberry-starter-atom.njk (virtual)
+[11ty] Writing ./_site/info/all_posts/index.html from ./src/info/all_posts/all_posts.html (liquid)
+[11ty] Writing ./_site/info/about/index.html from ./src/info/about/about.md (liquid)
+[11ty] Writing ./_site/tags/posts/index.html from ./src/tags.md (liquid)
+[11ty] Writing ./_site/posts/example_posts/faq/index.html from ./src/posts/example_posts/faq.md (liquid)
+[11ty] Writing ./_site/posts/example_posts/installation/index.html from ./src/posts/example_posts/installation.md (liquid)
+[11ty] Writing ./_site/posts/example_posts/markdown-example/index.html from ./src/posts/example_posts/markdown-example.md (liquid)
+[11ty] Writing ./_site/posts/example_posts/user-ref/index.html from ./src/posts/example_posts/user-ref.md (liquid)
+[11ty] Writing ./_site/index.html from ./src/index.md (liquid)
+[11ty] Writing ./_site/tags/navbar/index.html from ./src/tags.md (liquid)
+[11ty] Writing ./_site/tags/guide/index.html from ./src/tags.md (liquid)
+[11ty] Writing ./_site/tags/strawberry/index.html from ./src/tags.md (liquid)
+[11ty] Copied 17 Wrote 12 files in 0.24 seconds (v3.0.1-alpha.5)
+[11ty] Watching…
