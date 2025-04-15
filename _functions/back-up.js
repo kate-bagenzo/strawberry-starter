@@ -1,18 +1,19 @@
 import fs from 'fs';
+import path from 'path';
 
-if (!(fs.existsSync('_backup/'))) {
-    fs.mkdirSync('_backup/');
-    fs.mkdirSync('_backup/src/');
-    fs.mkdirSync('_backup/src/_data');
+if (!(fs.existsSync(path.normalize('_backup/')))) {
+    fs.mkdirSync(path.normalize('_backup/'));
+    fs.mkdirSync(path.normalize('_backup/src/'));
+    fs.mkdirSync(path.normalize('_backup/src/_data'));
 }
 
-fs.existsSync('src/index.md') && fs.copyFileSync('src/index.md', '_backup/src/index.md');
-fs.existsSync('src/favicon.ico') && fs.copyFileSync('src/favicon.ico', '_backup/src/favicon.ico');
-fs.existsSync('src/social.png') && fs.copyFileSync('src/social.png', '_backup/src/social.png');
-fs.existsSync('src/_data/config.jsonc') && fs.copyFileSync('src/_data/config.jsonc', '_backup/src/_data/config.jsonc');
+fs.existsSync(path.normalize('src/index.md')) && fs.copyFileSync(path.normalize('src/index.md'), path.normalize('_backup/src/index.md'));
+fs.existsSync(path.normalize('src/favicon.ico')) && fs.copyFileSync(path.normalize('src/favicon.ico'), path.normalize('_backup/src/favicon.ico'));
+fs.existsSync(path.normalize('src/social.png')) && fs.copyFileSync(path.normalize('src/social.png'), path.normalize('_backup/src/social.png'));
+fs.existsSync(path.normalize('src/_data/config.jsonc')) && fs.copyFileSync(path.normalize('src/_data/config.jsonc'), path.normalize('_backup/src/_data/config.jsonc'));
 
-fs.existsSync('src/posts/') && fs.cpSync('src/posts/', '_backup/src/posts/', {recursive: true});
-fs.existsSync('src/info/') && fs.cpSync('src/info/', '_backup/src/info/', {recursive: true});
-fs.existsSync('src/assets/') && fs.cpSync('src/assets/', '_backup/src/assets/', {recursive: true});
+fs.existsSync(path.normalize('src/posts/')) && fs.cpSync(path.normalize('src/posts/'), path.normalize('_backup/src/posts/'), {recursive: true});
+fs.existsSync(path.normalize('src/info/')) && fs.cpSync(path.normalize('src/info/'), path.normalize('_backup/src/info/'), {recursive: true});
+fs.existsSync(path.normalize('src/assets/')) && fs.cpSync(path.normalize('src/assets/'), path.normalize('_backup/src/assets/'), {recursive: true});
 
 console.log(' 🍓🗃️  Site backed up successfully.');
