@@ -7,7 +7,8 @@
     "start": "npm run dev",
     "dev": "rimraf _site/ && npx @11ty/eleventy --serve --port 1234",
     "build": "rimraf _site/ && npx @11ty/eleventy",
-    "upload": "npm run build && node _functions/upload-neo.js"
+    "upload": "npm run build && node _functions/upload-neo.js",
+    "backup": "rimraf _backup/ && node _functions/back-up.js"
   },
   "keywords": [],
   "author": "Kate Bagenzo",

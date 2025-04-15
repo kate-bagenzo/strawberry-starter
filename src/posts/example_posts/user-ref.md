@@ -59,6 +59,9 @@ This page explains how to do various things. You can find more step-by-step inst
 - `npm run upload`
     - This command will build your site (as if you had typed `npm run build`), and then upload your site directly to Neocities.
     - However, it won't work out of the box. Check the [installation guide](/posts/example_posts/installation) and the `.env` file for more info.
+- `npm run backup`
+    - New in version 1.1.0!
+    - Backs up your site to a folder `_backup`. You can use this backup to upgrade Strawberry Starter versions - just paste it into the newer version.
 
 ### Detailed Folder Layout Reference
 Here's an overview of the folders and files in Strawberry Starter. You can ignore most of these and have a perfectly functional blog, but if you're curious and/or brave:

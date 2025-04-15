@@ -113,13 +113,19 @@ if (process.env.NEOCITIES_API) {
           if (file.isFile()) {
               const newName = path.normalize(`${file.parentPath.replace("_site", subDir)}/${file.name}`).replace(/\\/g, '/');
               const newPath = path.normalize(`${file.parentPath}/${file.name}`).replace(/\\/g, '/');
-              toUpload.push({
+              if (newName == '/index.html') {
+                toUpload.push({
+                    name: newName,
+                    path: newPath
+                });
+              } else {
+                toUpload.unshift({
                   name: newName,
                   path: newPath
               });
-          }
-      });
-
+              }
+            }
+          });
       const uploadBatches = [];
       while (toUpload.length) {
         uploadBatches.push(toUpload.splice(0,100));

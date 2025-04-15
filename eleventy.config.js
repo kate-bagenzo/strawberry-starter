@@ -82,6 +82,14 @@ export default function (eleventyConfig) {
 
   });
 
+  eleventyConfig.addFilter("cleanPages", function(value) {
+    const clean = [];
+    for (let i = 0; i < value.length; i++) {
+      value[i].data.title && clean.push(value[i]);
+    }
+    return clean;
+  });
+
   eleventyConfig.addFilter("debug", function(value) {
     console.log(value);
     return value;
