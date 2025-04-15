@@ -79,10 +79,15 @@ Blog posts start with a little thing called *front matter*. It looks like this:
 ---
 title: The title of the blog post goes here
 date: 2025-12-25
+tag:
+- intro
+- example
 ---
 ```
 The title appears as a header on the post page, and also on internal links (on the frontpage's "Latest posts" section and the "All posts" page).  
 The date is actually optional - if it's not present, the file creation date will be used. This can cause some issues if you backup your posts somewhere and then reupload them - the file creation date might change! I highly recommend you always manually set the date.  
+Tags are also optional: you can add them to a post to allow users to navigate by tag!
+
 Create a new post now - give it a title and today's date. When you save the file, you should see it appear on the dev server.
 
 ## The index and navbar

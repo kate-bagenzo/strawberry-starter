@@ -86,6 +86,8 @@ Here's an overview of the folders and files in Strawberry Starter. You can ignor
     - `posts/`
         - Contains blog posts.
         - If you want to add a new blog post, add a .md file here.
+    - `utils/`
+        - Contains various utilities, like the tags page.
     - `index.md`
         - This is the homepage of your blog.
 - `social.png`

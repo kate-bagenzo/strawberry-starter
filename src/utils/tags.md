@@ -9,7 +9,7 @@ pagination:
 permalink: /tags/{{ tag }}/
 layout: layout.html
 eleventyComputed:
-  title: Posts Tagged "{{ tag }}"
+  title: Tagged "{{ tag }}"
 ---
 
 {% assign taglist = collections[ tag ] %}
@@ -17,7 +17,7 @@ eleventyComputed:
 <article>
     <header class="tagged">
     <hr>
-        <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+        <h2><a href="{{ post.url  }}">{{ post.data.title }}</a></h2>
         <time>{{ page.date | dateFormat }}</time>
     <hr>
     </header>
