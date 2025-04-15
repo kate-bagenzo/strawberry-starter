@@ -12,13 +12,14 @@ eleventyComputed:
   title: Tagged "{{ tag }}"
 ---
 
-{% assign taglist = collections[ tag ] %}
-{% for post in taglist | reverse %}
+{% assign taglist = collections[ tag ] | forceReverse %}
+
+{% for post in taglist %}
 <article>
     <header class="tagged">
     <hr>
         <h2><a href="{{ post.url  }}">{{ post.data.title }}</a></h2>
-        <time>{{ page.date | dateFormat }}</time>
+        <time>{{ post.date | dateFormat }}</time>
     <hr>
     </header>
 {{ post.content }}

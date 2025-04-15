@@ -35,6 +35,8 @@ export default function (eleventyConfig) {
 		}
 	});
 
+  eleventyConfig.addGlobalData("layout", "layout.html");
+
   // LAST UPDATE FORMAT
   eleventyConfig.addGlobalData('lastUpdate', () => {
     let now = new Date().toUTCString();
@@ -88,6 +90,10 @@ export default function (eleventyConfig) {
       value[i].data.title && clean.push(value[i]);
     }
     return clean;
+  });
+
+  eleventyConfig.addFilter("forceReverse", function(value) {
+    return value.toReversed();
   });
 
   eleventyConfig.addFilter("debug", function(value) {
