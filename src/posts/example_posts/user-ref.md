@@ -61,10 +61,13 @@ This page explains how to do various things. You can find more step-by-step inst
     - However, it won't work out of the box. Check the [installation guide](/posts/example_posts/installation) and the `.env` file for more info.
 - `npm run backup`
     - New in version 1.1.0!
-    - Backs up your site to a folder `_backup`. You can use this backup to upgrade Strawberry Starter versions - just paste it into the newer version.
+    - Backs up your site to a folder `_backup`. You can use this backup to upgrade Strawberry Starter versions - just paste the folder into the newer version.
 
 ### Detailed Folder Layout Reference
 Here's an overview of the folders and files in Strawberry Starter. You can ignore most of these and have a perfectly functional blog, but if you're curious and/or brave:
+- `_backup/`
+    - Contains a backup of your blog.
+    - Created by running `npm run backup`.
 - `_functions/`
     - Contains various scripts run by Node during the site's build and install.
 - `_site/`
@@ -86,6 +89,8 @@ Here's an overview of the folders and files in Strawberry Starter. You can ignor
     - `posts/`
         - Contains blog posts.
         - If you want to add a new blog post, add a .md file here.
+    - `minifeeds/`
+        - Contains additional posts that won't appear in "All Posts" or the RSS Feed - only the tag view.
     - `utils/`
         - Contains various utilities, like the tags page.
     - `index.md`

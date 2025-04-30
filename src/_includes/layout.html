@@ -9,6 +9,7 @@ layout: head.html
                 <li><a href="{{ i.url }}">{{ i.data.title }}</a></li>
             {% endfor %}
         </ol>
+        {% include "navbar.html" %}
     </nav>
     <main>
         <header>
@@ -34,6 +35,7 @@ layout: head.html
     {% assign previousPost = collections.posts | getPreviousCollectionItem %}
     {% assign nextPost = collections.posts | getNextCollectionItem %}
     {% if previousPost or nextPost %}
+
     <nav id="pagination">
         {% if previousPost %}
         <section class="pagectrl pageprev">
@@ -50,6 +52,11 @@ layout: head.html
         {% endif %}
     </nav>
     {% endif %}
+
+    {% if postCheck %}
+    {% include "comments.html" %}
+    {% endif %}
+
     <footer>
         <p>
             {{ config.siteName }} is written by 

@@ -92,3 +92,10 @@ pre:has(code) {
 .lastupdate::after {
     content: " ◯ ";
 }
+
+.commentbox,
+#disqus_thread {
+    border-left: 1px solid var(--main-fg-color);
+    border-right: 1px solid var(--main-fg-color);
+    background-color: var(--secondary-bg-color);
+}

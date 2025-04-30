@@ -86,7 +86,7 @@ tag:
 ```
 The title appears as a header on the post page, and also on internal links (on the frontpage's "Latest posts" section and the "All posts" page).  
 The date is actually optional - if it's not present, the file creation date will be used. This can cause some issues if you backup your posts somewhere and then reupload them - the file creation date might change! I highly recommend you always manually set the date.  
-Tags are also optional: you can add them to a post to allow users to navigate by tag!
+Tags are also optional: you can add them to a post to allow users to navigate by tag. If you have at least one custom tag, a tag view will appear in "All Posts".
 
 Create a new post now - give it a title and today's date. When you save the file, you should see it appear on the dev server.
 
@@ -99,6 +99,8 @@ There are some other pages on your site besides blog posts, though! You'll notic
         - If you want, you can instead add a blog post to the navbar by adding `tags: navbar` to its front matter.
             - In fact, if you've noticed, this very installation guide has such a tag!
 If the difference between .md files in `posts` and `info` is confusing to you, don't worry. The main difference is that only `posts` will appear in "Latest posts" or "All posts", while `info`s will only appear in the navbar.
+
+You'll also notice an `#updates` link in the navbar, which leads to a tag view of a bunch of update posts. This is a minifeed - a way to make little posts that won't clog up your "All Posts" or RSS Feed. Kind of like a mix between social media sites & blogging! If you want, you can learn more about this at the [Advanced Features Guide](/posts/example_posts/advanced-features/), but if it doesn't sound interesting to you, you can just delete everything in `_includes/navbar.html`.
 
 ## Favicon and Preview
 There are two last things you want to customize:

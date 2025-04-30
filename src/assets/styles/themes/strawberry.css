@@ -106,3 +106,9 @@ hr {
     color: var(--main-header-color);
     border: 2px dashed;
 }
+
+.commentbox,
+#disqus_thread {
+    border-left: 2px solid var(--main-fg-color);
+    border-right: 2px solid var(--main-fg-color);
+}

@@ -138,3 +138,8 @@ pre:has(code) {
 .lastupdate::after {
     content: ' ☉ '
 }
+
+.commentbox,
+#disqus_thread {
+    background-color: var(--main-bg-color);
+}

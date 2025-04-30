@@ -91,3 +91,10 @@ pre:has(code) {
 img[src*='berrysprite.png'] {
     filter: sepia(100%);
 }
+
+.commentbox,
+#disqus_thread {
+    border-left: 4px ridge var(--main-border-color);
+    border-right: 4px ridge var(--main-border-color);
+    background-color: var(--main-bg-color);
+}

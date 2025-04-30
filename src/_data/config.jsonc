@@ -34,14 +34,14 @@
 
     // the theme used by your blog
     // themes are located in src/assets/styles/themes
-        // strawberry: the default theme
-        // contrast:   a sleek, high contrast black & white theme.
-        // bark:       an old-school, green & brown autumnal theme.
-        // nightlight: a flat, purple polka dot theme.
-        // ocean:      a dark blue theme with rounded corners.
-        // morning:    a bright orange theme with a fun navigation bar style.
-        // bombo:      a deep forest green theme with gradients. (designed by fotocopiadora!)
-        // plain:      a very barebones, minimal theme - more of a template for you to create your own theme
+        //🍓 strawberry: the default theme
+        //🔳 contrast:   a sleek, high contrast black & white theme.
+        //🌳 bark:       an old-school, green & brown autumnal theme.
+        //🛏️ nightlight: a flat, purple polka dot theme.
+        //🌊 ocean:      a dark blue theme with rounded corners.
+        //🥐 morning:    a bright orange theme with a fun navigation bar style.
+        //🖨️ bombo:      a deep forest green theme with gradients. (designed by fotocopiadora!)
+        //🔧 plain:      a very barebones, minimal theme - more of a template for you to create your own theme
     // feel free to look inside the theme files and customize them - it's not hard to edit simple things, like the colors!
     "siteStyle": "strawberry",
 

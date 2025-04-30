@@ -21,29 +21,8 @@ I recommend a few starting places:
     - The videos here do a great job explaining the basics of 11ty: making files with tags and iterating over collections.
     - They mostly scratch the surface, but it's good to start here and then search what you want to do. 11ty is very basic out of the box, but you can extend it a lot, usually by editing `eleventy.config.js`.
 
-## How can I back up my blog?
-If you only want to back up the bare essentials, there's a convenient command: `npm run backup`.  
-This will dump the following into a new folder, `_backup`:
-- Everything under `src/assets/`
-- Everything under `src/info/`
-- Everything under `src/posts/`
-- Your `_data/config.jsonc`
-- Your `favicon.ico`
-- Your `index.md`
-- Your `social.png`
-
-You'll need to place these files back into a Strawberry Starter folder, but this way you won't waste any space backing up the files required for Strawberry Starter to run. (You can always redownload it later!)
-
-If you instead really want to backup EVERYTHING, delete the `node_modules` folder.  
-(I also **STRONGLY** recommend you delete `.env.local` if you've created it, just for security reasons. This is especially important if you're going to upload your blog to a storage service you don't control, like Dropbox or Google Drive. You can always remake it later - you don't want to ever risk someone getting control of your site!)    
-Once those tasks are both done, you can store your blog anywhere. It's a good idea to make a `.zip` to save on file space.  
-When you deploy your site from backup, run `npm install` again, and the `node_modules` folder will return.
-
-
-## How do I migrate my blog to a newer version?
-Use the `npm run backup` command to create a folder of files suitable for pasting into the new version's folder.
-
-If you've edited your html templates or other pages I recommend not copying those as they can change with updates. You'll have to remake your changes on the new version - sorry!
+## How can I back up my blog, or add comments?
+Check out the [Advanced features guide](/posts/example_posts/advanced-features/).
 
 ## I have a question not answered here.
 Try making a comment on the itch page, opening an issue or pull request on the Github (if you know how to do that) or, alternatively, feel free to reach out to me on social media or email. Or if you just want to show me a cool blog you made 😊
