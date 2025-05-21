@@ -41,6 +41,7 @@
         //🌊 ocean:      a dark blue theme with rounded corners.
         //🥐 morning:    a bright orange theme with a fun navigation bar style.
         //🖨️ bombo:      a deep forest green theme with gradients. (designed by fotocopiadora!)
+        //🍨 neapolitan: a summery theme with a cool navigation bar style.
         //🔧 plain:      a very barebones, minimal theme - more of a template for you to create your own theme
     // feel free to look inside the theme files and customize them - it's not hard to edit simple things, like the colors!
     "siteStyle": "strawberry",

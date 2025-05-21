@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'noto-serif';
+    src: url('../../fonts/notoserif.ttf');
+}
+
+:root {
+    --main-bg-color: #ffffea;
+    --secondary-bg-color: #63372C;
+    --main-fg-color: #1d1d1d;
+    --main-highlight-color: #F4796B;
+}
+
+html {
+    scrollbar-color: var(--main-fg-color) #00000000;
+    font-family: 'noto-serif', 'serif';
+    background-color: var(--secondary-bg-color);
+}
+
+nav:not(#pagination) {
+    background-color: var(--main-bg-color);
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    width: 10rem;
+    height: 100%;
+    border-right: 3px ridge var(--main-bg-color);
+    gap: 3rem;
+    background-color: var(--main-highlight-color);
+    padding: 0rem;
+    padding-top: 1rem;
+}
+
+nav:not(#pagination) ol {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+}
+
+nav:not(#pagination) li {
+    width: 100%;
+}
+
+nav:not(#pagination) a {
+    font-size: 1.5rem;
+    color: var(--main-bg-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    background-color: var(--main-bg-color);
+    color: var(--main-fg-color);
+}
+
+main a {
+    color: var(--secondary-bg-color);
+}
+
+main,
+footer {
+    border: 3px ridge var(--main-bg-color);
+}
+
+footer {
+    background-color: var(--main-highlight-color);
+    color: var(--secondary-bg-color);
+}
+
+footer a {
+    color: var(--main-bg-color);
+}
+
+nav {
+    border-bottom: none;
+}
+
+blockquote {
+    margin-left: 0;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--main-highlight-color);
+}
+
+code {
+    background-color: var(--main-highlight-color);
+    padding: 0.1rem;
+}
+
+pre:has(code) {
+    background-color: var(--main-highlight-color);
+}
+
+#pagination {
+    flex-direction: row;
+    background-color: var(--secondary-bg-color);
+    border-left: 3px ridge var(--main-bg-color);
+    border-right: 3px ridge var(--main-bg-color);
+    color: var(--main-bg-color);
+}
+
+#pagination a {
+    color: var(--main-highlight-color);
+}
+
+a:hover {
+    opacity: 75%;
+}
+
+.lastupdate::after {
+    content: " ✿ ";
+}
