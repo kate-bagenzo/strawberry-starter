@@ -9,7 +9,7 @@ pagination:
 permalink: /tags/{{ tag }}/
 layout: layout.html
 eleventyComputed:
-  title: Tagged "{{ tag }}"
+  title: Tagged {{ tag }}
 ---
 
 {% assign taglist = collections[ tag ] | forceReverse %}
